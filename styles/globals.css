@@ -1,3 +1,4 @@
+@import './typography.pcss';
 @import './utilities.pcss';
 
 @tailwind base;

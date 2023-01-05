@@ -16,6 +16,7 @@
     "clsx": "^1.2.1",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
+    "gray-matter": "^4.0.3",
     "jotai": "^1.12.1",
     "next": "13.1.1",
     "prettier-plugin-tailwind": "^2.2.12",

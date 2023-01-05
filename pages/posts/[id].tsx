@@ -24,7 +24,7 @@ const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <br />
       <Date dateString={post.date!} />
       <div
-        className="rich-text"
+        className="prose"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
     </div>

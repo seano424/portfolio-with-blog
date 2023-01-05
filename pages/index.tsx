@@ -1,17 +1,13 @@
 import clsx from 'clsx'
 import Head from 'next/head'
+import Link from 'next/link'
 import { Inter } from '@next/font/google'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import { getSortedPostsData } from '../lib/posts'
+import { getSortedPostsData } from '@/lib/posts'
+import { PostType } from '@/lib/types'
+import BlogCard from '@/components/BlogCard'
 
 const inter = Inter({ subsets: ['latin'] })
-
-type Post = {
-  id?: string
-  title?: string
-  date?: string
-  content?: string
-}
 
 export default function Home({
   posts,
@@ -27,17 +23,14 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="container py-10">
-        <ul>
-          {posts.map(({ id, date, title }) => (
-            <li key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
+        <div className="grid gap-3">
+          {posts.map((post) => (
+            <div key={post.id}>
+              <BlogCard {...post} />
+              {post.excerpt && <p className='prose'>{post.excerpt}</p>}
+            </div>
           ))}
-        </ul>
+        </div>
       </main>
       <footer className="mt-auto flex justify-center gap-3">
         <p>hello</p>
@@ -49,8 +42,10 @@ export default function Home({
   )
 }
 
-export const getStaticProps: GetStaticProps<{ posts: Post[] }> = async () => {
-  const allPostsData: Post[] = getSortedPostsData()
+export const getStaticProps: GetStaticProps<{
+  posts: PostType[]
+}> = async () => {
+  const allPostsData: PostType[] = getSortedPostsData()
   return {
     props: {
       posts: allPostsData,

@@ -1,14 +1,23 @@
+import clsx from 'clsx'
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
-import { useAtom } from 'jotai'
-import { testAtom } from '../store'
-import clsx from 'clsx'
-import Test from '../components/Test'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { getSortedPostsData } from '../lib/posts'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
-  const [{ darkmode }, setTest] = useAtom(testAtom)
+type Post = {
+  id?: string
+  title?: string
+  date?: string
+  content?: string
+}
+
+export default function Home({
+  posts,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log(posts)
+
   return (
     <div className={clsx('flex min-h-screen flex-col', inter.className)}>
       <Head>
@@ -18,21 +27,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="container py-10">
-        <div className="mb-10 flex items-center gap-3">
-          <button
-            className="button"
-            onClick={() =>
-              setTest((prevState) => ({
-                ...prevState,
-                darkmode: !prevState.darkmode,
-              }))
-            }
-          >
-            Toggle Global Theme
-          </button>
-          <p>state: {darkmode ? 'dark' : 'light'}</p>
-        </div>
-        <Test />
+        <ul>
+          {posts.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul>
       </main>
       <footer className="mt-auto flex justify-center gap-3">
         <p>hello</p>
@@ -42,4 +47,13 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps<{ posts: Post[] }> = async () => {
+  const allPostsData: Post[] = getSortedPostsData()
+  return {
+    props: {
+      posts: allPostsData,
+    },
+  }
 }

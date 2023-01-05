@@ -4,6 +4,7 @@ import {
   GetStaticPropsContext,
 } from 'next'
 import { getAllPostIds, getPostData } from '../../lib/posts'
+import Date from '@/components/Date'
 
 type Post = {
   id: string
@@ -21,7 +22,7 @@ const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <br />
       {post.id}
       <br />
-      {post.date}
+      <Date dateString={post.date!} />
       <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
     </div>
   )

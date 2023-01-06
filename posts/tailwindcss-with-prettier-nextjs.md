@@ -1,8 +1,8 @@
 ---
-title: 'Two Forms of Pre-rendering'
-date: '2020-01-01'
-tags: ['Next.js', 'SSR', 'SSG']
-excerpt: 'Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.'
+title: 'How to add the Prettier Tailwind CSS Plugin with Next.js'
+date: '2023-01-06'
+tags: ['TailwindCSS', 'Next.js', 'Prettier']
+excerpt: 'Adding the prettier plugin for Tailwind CSS seems simple enough. However, there are a couple of things you will need to do with Next.js to get it working properly.'
 ---
 
 ![alt text](https://images.unsplash.com/photo-1672696049977-5ef343a91556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60)

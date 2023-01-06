@@ -16,7 +16,7 @@ const BlogCard = (props: PostType) => {
           robotoMono.className
         )}
       >
-        <ul className="flex items-center gap-3">
+        <ul className="flex flex-wrap items-center gap-3">
           {tags &&
             tags.map((tag, i) => (
               <li

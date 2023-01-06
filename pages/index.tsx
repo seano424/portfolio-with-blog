@@ -13,7 +13,11 @@ export default function Home({
       {posts.map((post) => (
         <div key={post.id}>
           <BlogCard {...post} />
-          {post.excerpt && <p className="prose">{post.excerpt}</p>}
+          {post.excerpt && (
+            <p className="prose transition-all duration-200 ease-linear dark:text-white">
+              {post.excerpt}
+            </p>
+          )}
         </div>
       ))}
     </div>

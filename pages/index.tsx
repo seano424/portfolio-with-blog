@@ -9,12 +9,12 @@ export default function Home({
   console.log(posts)
 
   return (
-    <div className="grid gap-3">
+    <div className="grid gap-3 md:grid-cols-2">
       {posts.map((post) => (
         <div key={post.id}>
           <BlogCard {...post} />
           {post.excerpt && (
-            <p className="prose transition-all duration-200 ease-linear dark:text-white">
+            <p className="prose transition-all duration-100 ease-linear dark:text-white">
               {post.excerpt}
             </p>
           )}

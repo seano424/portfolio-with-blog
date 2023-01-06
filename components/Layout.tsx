@@ -20,7 +20,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   return (
     <div
       className={clsx(
-        'flex min-h-screen flex-col transition-all duration-200 ease-linear dark:bg-primary-black',
+        'flex min-h-screen flex-col transition-all duration-100 ease-linear dark:bg-primary-black',
         inter.className
       )}
     >

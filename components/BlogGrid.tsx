@@ -14,9 +14,9 @@ const BlogGrid = ({ heading, posts }: BlogGridProps) => {
   return (
     <div className="grid gap-6">
       {heading && (
-        <h2 className="flex gap-3 text-4xl uppercase dark:text-white">
+        <h2 className="flex gap-3 text-4xl font-black uppercase tracking-tighter dark:text-white lg:text-7xl">
           {heading}
-          <span className="text-base">{posts.length}</span>
+          <span className="text-base lg:text-xl">{posts.length}</span>
         </h2>
       )}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

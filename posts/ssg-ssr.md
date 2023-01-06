@@ -1,6 +1,6 @@
 ---
 title: 'When to Use Static Generation v.s. Server-side Rendering'
-tags: ['Next.js', 'SSR', 'SSG']****
+tags: ['Next.js', 'SSR', 'SSG']
 date: '2020-01-02'
 ---
 

@@ -6,8 +6,6 @@ import BlogGrid from '@/components/BlogGrid'
 export default function Home({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(posts)
-
   return <BlogGrid posts={posts} heading="Articles" />
 }
 

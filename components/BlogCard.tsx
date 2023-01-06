@@ -1,12 +1,21 @@
-import Link from 'next/link'
+import { Roboto_Mono } from '@next/font/google'
 import { PostType } from '@/lib/types'
+import Link from 'next/link'
 import Date from './Date'
+import clsx from 'clsx'
+
+const robotoMono = Roboto_Mono({ subsets: ['latin'], weight: '500' })
 
 const BlogCard = (props: PostType) => {
   const { tags, title, date, id } = props
   return (
     <Link href={`/posts/${id}`}>
-      <div className="grid gap-5 rounded-xl bg-teal-100 p-5 font-mono shadow transition-all duration-100 ease-linear dark:bg-slate-800 dark:text-white">
+      <div
+        className={clsx(
+          'grid gap-5 rounded-xl bg-teal-100 p-5 shadow transition-all duration-100 ease-linear dark:bg-slate-800 dark:text-white',
+          robotoMono.className
+        )}
+      >
         <ul className="flex items-center gap-3">
           {tags &&
             tags.map((tag, i) => (

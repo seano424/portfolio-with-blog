@@ -14,9 +14,9 @@ const BlogGrid = ({ heading, posts }: BlogGridProps) => {
           <span className="text-base">{posts.length}</span>
         </h2>
       )}
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {posts.map((post) => (
-          <div className="grid gap-6" key={post.id}>
+          <div className="grid h-min gap-6" key={post.id}>
             <BlogCard {...post} />
             {post.excerpt && (
               <p className="prose transition-all duration-100 ease-linear dark:text-white">

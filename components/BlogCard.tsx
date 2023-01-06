@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Date from './Date'
 import clsx from 'clsx'
 
-const robotoMono = Roboto_Mono({ subsets: ['latin'], weight: '500' })
+const robotoMono = Roboto_Mono({ subsets: ['latin'] })
 
 const BlogCard = (props: PostType) => {
   const { tags, title, date, id } = props
@@ -12,7 +12,7 @@ const BlogCard = (props: PostType) => {
     <Link href={`/posts/${id}`}>
       <div
         className={clsx(
-          'grid gap-5 rounded-xl bg-teal-100 p-5 shadow transition-all duration-100 ease-linear dark:bg-slate-800 dark:text-white',
+          'grid gap-5 rounded-xl bg-cyan-100 p-5 shadow transition-all duration-100 ease-linear dark:bg-slate-800 dark:text-white',
           robotoMono.className
         )}
       >
@@ -21,13 +21,13 @@ const BlogCard = (props: PostType) => {
             tags.map((tag, i) => (
               <li
                 key={i}
-                className="rounded-full border border-black px-3 py-1 uppercase"
+                className="rounded-full border border-black px-4 py-1 uppercase"
               >
                 {tag}
               </li>
             ))}
         </ul>
-        <h4 className="text-xl lg:text-2xl">{title}</h4>
+        <h4 className="text-xl md:text-2xl lg:text-3xl">{title}</h4>
         <Date dateString={date ?? ''} />
       </div>
     </Link>

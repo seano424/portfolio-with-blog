@@ -14,8 +14,6 @@ type Post = {
 }
 
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  console.log(post)
-
   return (
     <div>
       {post.title}

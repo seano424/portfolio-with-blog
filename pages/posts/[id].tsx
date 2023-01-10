@@ -24,7 +24,7 @@ const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <br />
       <Date dateString={post.date!} />
       <div
-        className="prose"
+        className="prose max-w-none"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
     </div>

@@ -26,7 +26,7 @@ const BlogGrid = ({ heading, posts }: BlogGridProps) => {
             {post.excerpt && (
               <p
                 className={clsx(
-                  'prose text-black transition-all duration-100 ease-linear dark:text-white xl:text-lg',
+                  'container prose text-black transition-all duration-100 ease-linear dark:text-white xl:text-lg',
                   inter.className
                 )}
               >

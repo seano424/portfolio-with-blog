@@ -7,7 +7,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     container: {
-      padding: '.5rem',
+      padding: '2rem',
       center: true,
     },
     debugScreens: {

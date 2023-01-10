@@ -5,7 +5,7 @@ import Date from './Date'
 import clsx from 'clsx'
 
 const inter = Inter()
-const mono = Space_Mono({ weight: '400' })
+const mono = Space_Mono({ weight: '400', subsets: ['latin'] })
 
 const BlogCard = (props: PostType) => {
   const { tags, title, date, id } = props
@@ -13,8 +13,7 @@ const BlogCard = (props: PostType) => {
     <Link href={`/posts/${id}`}>
       <div
         className={clsx(
-          'grid gap-5 rounded-xl border-4 border-[#caf0f8] bg-[#90e0ef] p-5 leading-loose shadow transition-all duration-100 ease-linear dark:border-white',
-          mono.className
+          'grid gap-5 rounded-xl border-4 border-[#caf0f8] bg-[#90e0ef] p-5 leading-loose shadow transition-all duration-100 ease-linear dark:border-white'
         )}
       >
         <ul className="flex flex-wrap items-center gap-3">
@@ -31,7 +30,9 @@ const BlogCard = (props: PostType) => {
               </li>
             ))}
         </ul>
-        <h4 className="text-xl font-black md:text-2xl">{title}</h4>
+        <h4 className={clsx('text-xl font-black md:text-2xl', mono.className)}>
+          {title}
+        </h4>
         <Date dateString={date ?? ''} />
       </div>
     </Link>

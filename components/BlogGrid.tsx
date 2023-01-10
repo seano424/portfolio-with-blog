@@ -19,7 +19,7 @@ const BlogGrid = ({ heading, posts }: BlogGridProps) => {
           <span className="text-base lg:text-xl">{posts.length}</span>
         </h2>
       )}
-      <div className="grid gap-x-10 gap-y-20 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {posts.map((post) => (
           <div className="grid h-min gap-6" key={post.id}>
             <BlogCard {...post} />

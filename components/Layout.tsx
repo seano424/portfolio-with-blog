@@ -3,10 +3,9 @@ import Head from 'next/head'
 import clsx from 'clsx'
 import { Inter } from '@next/font/google'
 import { useAtom } from 'jotai'
-import { atomWithStorage } from 'jotai/utils'
+import { darkModeAtom } from 'store'
 import { motion } from 'framer-motion'
 
-const darkModeAtom = atomWithStorage('darkMode', false)
 
 const inter = Inter({ subsets: ['latin'] })
 

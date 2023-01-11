@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion'
-import { useAtom, atom } from 'jotai'
+import { useAtom } from 'jotai'
+import { stepAtom } from 'store'
 import clsx from 'clsx'
-
-export const stepAtom = atom(1)
 
 function Step({ number }: { number: number }) {
   const [step, setStep] = useAtom(stepAtom)

@@ -2,7 +2,15 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import clsx from 'clsx'
 
-function Step({ step, currentStep }: { step: number; currentStep: number }) {
+function Step({
+  step,
+  currentStep,
+  setStep,
+}: {
+  step: number
+  currentStep: number
+  setStep: any
+}) {
   let status =
     currentStep === step
       ? 'active'
@@ -11,18 +19,21 @@ function Step({ step, currentStep }: { step: number; currentStep: number }) {
       : 'complete'
 
   return (
-    <motion.div
+    <motion.button
+      onClick={() => setStep(step + 1)}
       animate={{
         backgroundColor: status === 'complete' ? 'var(--blue-500)' : '#fff',
+        borderColor:
+          status === 'complete' || status === 'active'
+            ? 'var(--blue-500)'
+            : 'var(--slate-200)',
+        color:
+          status === 'complete' || status === 'active'
+            ? 'var(--blue-500)'
+            : 'var(--slate-400)',
       }}
-      className={clsx(
-        'flex h-10 w-10 items-center justify-center rounded-full font-semibold',
-        status === 'active'
-          ? ' border-blue-500 bg-white text-blue-500'
-          : status === 'complete'
-          ? 'border-blue-500 bg-blue-500'
-          : ' bg-white text-slate-400'
-      )}
+      transition={{ duration: 1 }}
+      className="flex h-10 w-10 items-center justify-center rounded-full border-2 font-semibold"
     >
       <div className="flex items-center justify-center">
         {status === 'complete' ? (
@@ -37,14 +48,14 @@ function Step({ step, currentStep }: { step: number; currentStep: number }) {
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              d="M9 12.75L11.25 15 15 9.75M21"
             />
           </svg>
         ) : (
           <span>{step}</span>
         )}
       </div>
-    </motion.div>
+    </motion.button>
   )
 }
 
@@ -54,10 +65,10 @@ export default function MultiStepWizard() {
   return (
     <div className="my-10 mx-auto w-full max-w-md rounded-2xl bg-tahiti-100 shadow-md">
       <div className="flex justify-between rounded p-8">
-        <Step step={1} currentStep={step} />
-        <Step step={2} currentStep={step} />
-        <Step step={3} currentStep={step} />
-        <Step step={4} currentStep={step} />
+        <Step step={1} setStep={setStep} currentStep={step} />
+        <Step step={2} setStep={setStep} currentStep={step} />
+        <Step step={3} setStep={setStep} currentStep={step} />
+        <Step step={4} setStep={setStep} currentStep={step} />
       </div>
       <div className="px-8 pb-8">
         <div>

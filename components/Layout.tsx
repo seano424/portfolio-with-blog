@@ -3,23 +3,28 @@ import Head from 'next/head'
 import clsx from 'clsx'
 import { Inter } from '@next/font/google'
 import { useAtom } from 'jotai'
-import { darkModeAtom } from 'store'
+import { themeAtom } from 'store'
 import { motion } from 'framer-motion'
-
 
 const inter = Inter({ subsets: ['latin'] })
 
+const browser = typeof window !== 'undefined'
+
 const Layout = ({ children }: PropsWithChildren) => {
-  const [darkMode, setDarkMode] = useAtom(darkModeAtom)
+  const [theme, setTheme] = useAtom(themeAtom)
 
   useEffect(() => {
-    darkMode && document.body.classList.add('dark')
-    !darkMode && document.body.classList.remove('dark')
-  }, [darkMode])
+    if (!browser) return
+
+    document.body.classList.remove('light', 'dark')
+    document.body.classList.add(theme)
+  }, [theme])
 
   return (
     <motion.div
-      animate={{ backgroundColor: darkMode ? 'var(--primary-black)' : '#fff' }}
+      animate={{
+        backgroundColor: theme === 'dark' ? 'var(--primary-black)' : '#fff',
+      }}
       className={clsx(
         'flex min-h-screen flex-col transition-all duration-100 ease-linear',
         inter.className
@@ -49,7 +54,7 @@ const Layout = ({ children }: PropsWithChildren) => {
 
         <button
           className="button my-4 w-max"
-          onClick={() => setDarkMode(!darkMode)}
+          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
           toggle theme
         </button>

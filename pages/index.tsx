@@ -3,6 +3,7 @@ import { createClient } from 'next-sanity'
 import { getSortedPostsData } from '@/lib/posts'
 import { PostType } from '@/lib/types'
 import BlogGrid from '@/components/BlogGrid'
+import MultiStepWizard from '@/components/MultiStepWizard'
 
 const client = createClient({
   projectId: 'n93acrcs',
@@ -13,11 +14,13 @@ const client = createClient({
 
 export default function Home({
   posts,
-  sanityPosts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(sanityPosts)
-
-  return <BlogGrid posts={posts} heading="Articles" />
+  return (
+    <>
+      <BlogGrid posts={posts} heading="Articles" />
+      <MultiStepWizard />
+    </>
+  )
 }
 
 export const getStaticProps: GetStaticProps<{

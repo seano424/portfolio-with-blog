@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import { Inter } from '@next/font/google'
 import { useAtom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'
+import { motion } from 'framer-motion'
 
 const darkModeAtom = atomWithStorage('darkMode', false)
 
@@ -18,9 +19,10 @@ const Layout = ({ children }: PropsWithChildren) => {
   }, [darkMode])
 
   return (
-    <div
+    <motion.div
+      animate={{ backgroundColor: darkMode ? 'var(--primary-black)' : '#fff' }}
       className={clsx(
-        'flex min-h-screen flex-col transition-all duration-100 ease-linear dark:bg-primary-black',
+        'flex min-h-screen flex-col transition-all duration-100 ease-linear',
         inter.className
       )}
     >
@@ -60,7 +62,7 @@ const Layout = ({ children }: PropsWithChildren) => {
         <p>hello</p>
         <p>hello</p>
       </footer>
-    </div>
+    </motion.div>
   )
 }
 

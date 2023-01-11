@@ -17,8 +17,8 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <BlogGrid posts={posts} heading="Articles" />
       <MultiStepWizard />
+      <BlogGrid posts={posts} heading="Articles" />
     </>
   )
 }

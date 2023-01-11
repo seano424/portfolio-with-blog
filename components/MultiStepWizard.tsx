@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import clsx from 'clsx'
 
 function Step({ step, currentStep }: { step: number; currentStep: number }) {
@@ -10,14 +11,17 @@ function Step({ step, currentStep }: { step: number; currentStep: number }) {
       : 'complete'
 
   return (
-    <div
+    <motion.div
+      animate={{
+        backgroundColor: status === 'complete' ? 'var(--blue-500)' : '#fff',
+      }}
       className={clsx(
-        'flex h-10 w-10 items-center justify-center rounded-full border-2 font-semibold',
+        'flex h-10 w-10 items-center justify-center rounded-full font-semibold',
         status === 'active'
-          ? 'border-blue-500 bg-white text-blue-500'
+          ? ' border-blue-500 bg-white text-blue-500'
           : status === 'complete'
           ? 'border-blue-500 bg-blue-500'
-          : 'border-slate-200 bg-white text-slate-400'
+          : ' bg-white text-slate-400'
       )}
     >
       <div className="flex items-center justify-center">
@@ -28,7 +32,7 @@ function Step({ step, currentStep }: { step: number; currentStep: number }) {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            className="h-10 w-10 text-white"
+            className="h-16 w-16 text-white"
           >
             <path
               stroke-linecap="round"
@@ -40,15 +44,15 @@ function Step({ step, currentStep }: { step: number; currentStep: number }) {
           <span>{step}</span>
         )}
       </div>
-    </div>
+    </motion.div>
   )
 }
 
 export default function MultiStepWizard() {
   const [step, setStep] = useState(1)
-  
+
   return (
-    <div className="my-10 mx-auto w-full max-w-md rounded-2xl bg-white shadow-md">
+    <div className="my-10 mx-auto w-full max-w-md rounded-2xl bg-tahiti-100 shadow-md">
       <div className="flex justify-between rounded p-8">
         <Step step={1} currentStep={step} />
         <Step step={2} currentStep={step} />

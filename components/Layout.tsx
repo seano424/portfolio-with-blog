@@ -8,14 +8,10 @@ import { motion } from 'framer-motion'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const browser = typeof window !== 'undefined'
-
 const Layout = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useAtom(themeAtom)
 
   useEffect(() => {
-    if (!browser) return
-
     document.body.classList.remove('light', 'dark')
     document.body.classList.add(theme)
   }, [theme])
@@ -58,6 +54,7 @@ const Layout = ({ children }: PropsWithChildren) => {
         >
           toggle theme
         </button>
+
         {children}
       </main>
       <footer className="mt-auto flex justify-center gap-3">

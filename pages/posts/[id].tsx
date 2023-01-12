@@ -16,13 +16,12 @@ type Post = {
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div>
-      {post.title}
-      <br />
-      {post.id}
-      <br />
-      <Date dateString={post.date!} />
+      <div className="grid gap-3">
+        <h1 className="text-4xl capitalize font-black">{post.title}</h1>
+        <Date dateString={post.date!} />
+      </div>
       <div
-        className="prose max-w-none"
+        className="prose max-w-none my-10"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
     </div>

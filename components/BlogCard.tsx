@@ -9,7 +9,7 @@ const BlogCard = (props: PostType) => {
     <Link href={`/posts/${id}`}>
       <div
         className={clsx(
-          'grid gap-10 rounded-xl border-4 border-primary-100 bg-primary-300 p-5 leading-loose text-slate-900 shadow transition-all duration-100 ease-linear dark:border-white'
+          'grid gap-10 rounded-xl border-4 border-primary-300 bg-primary-100 p-5 leading-loose text-slate-900 shadow transition-all duration-100 ease-linear dark:border-white'
         )}
       >
         <ul className="flex flex-wrap items-center gap-3">
@@ -27,7 +27,7 @@ const BlogCard = (props: PostType) => {
         </ul>
         <h4
           className={clsx(
-            'text-xl font-black tracking-wide md:text-3xl lg:text-4xl'
+            'font-mono text-xl font-black tracking-tighter md:text-3xl'
           )}
         >
           {title}

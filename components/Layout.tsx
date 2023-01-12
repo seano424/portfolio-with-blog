@@ -37,7 +37,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   return (
     <motion.div
       animate={{
-        backgroundColor: theme === 'dark' ? 'var(--primary-black)' : '#fff',
+        backgroundColor: theme === 'dark' ? 'var(--dark)' : 'var(--light)',
       }}
       className={clsx(
         'flex min-h-screen flex-col transition-all duration-100 ease-linear',

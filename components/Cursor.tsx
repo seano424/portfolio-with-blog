@@ -64,16 +64,16 @@ export default function Cursor() {
   if (typeof navigator !== 'undefined' && isMobile()) return null
   return (
     <div
-      className={`ease-in-outease-in-out border-dark dark:bg-dark pointer-events-none fixed z-50 h-10 w-10 -translate-y-1/2 -translate-x-1/2 transform rounded-full border-[1px] mix-blend-color-dodge transition-opacity duration-300 dark:border-opacity-0 dark:bg-opacity-100 dark:mix-blend-overlay
+      className={`pointer-events-none  fixed z-50 h-10 w-10 -translate-y-1/2 -translate-x-1/2 transform rounded-full border-[1px] border-dark mix-blend-color-dodge transition-opacity duration-300 ease-in-out dark:border-opacity-0 dark:bg-dark dark:bg-opacity-100 dark:mix-blend-overlay
         ${hidden ? 'opacity-0' : 'opacity-100'}
         ${
           clicked
-            ? 'bg-dark -translate-y-1/2 -translate-x-1/2 scale-90 transform'
+            ? '-translate-y-1/2 -translate-x-1/2 scale-90 transform bg-dark'
             : 'scale-100'
         }
         ${
           linkHovered
-            ? 'bg-dark dark:bg-light -translate-y-1/2 -translate-x-1/2 scale-150 transform transition-transform duration-300 ease-linear dark:border-white dark:border-opacity-100'
+            ? '-translate-y-1/2 -translate-x-1/2 scale-150 transform bg-dark transition-transform duration-300 ease-linear dark:border-white dark:border-opacity-100 dark:bg-light'
             : 'scale-100'
         }
       `}

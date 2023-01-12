@@ -1,20 +1,38 @@
-import { PropsWithChildren, useEffect } from 'react'
+import { PropsWithChildren, useEffect, useState } from 'react'
 import Head from 'next/head'
 import clsx from 'clsx'
 import { Inter } from '@next/font/google'
 import { useAtom } from 'jotai'
 import { themeAtom } from 'store'
 import { motion } from 'framer-motion'
+import Cursor from './Cursor'
 
 const inter = Inter({ subsets: ['latin'] })
 
 const Layout = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useAtom(themeAtom)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     document.body.classList.remove('light', 'dark')
     document.body.classList.add(theme)
   }, [theme])
+
+  useEffect(() => {
+    console.log(
+      '\n',
+      'Hello there!',
+      '\n',
+      'Want to reach out?!',
+      '\n',
+      'Shoot me an email @',
+      '\n',
+      'soreilly424@gmail.com',
+      '\n',
+      '🤗'
+    )
+    setMounted(true)
+  }, [])
 
   return (
     <motion.div
@@ -32,7 +50,7 @@ const Layout = ({ children }: PropsWithChildren) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      {mounted && <Cursor />}
       <main className="container py-10">
         {/* <nav className="relative z-0 flex justify-around">
           <button className="peer/home flex-1 dark:text-white">Home</button>

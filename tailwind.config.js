@@ -29,8 +29,13 @@ module.exports = {
     extend: {
       colors: {
         'primary-black': '#0c0b1d',
-        primary: 'rgb(var(--color-primary) / <alpha-value>)',
-        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        primary: {
+          100: '#caf0f8',
+          300: '#90e0ef',
+          500: '#00b4d8',
+          700: '#0077b6',
+          900: '#03045e',
+        },
         tahiti: {
           100: '#cffafe',
           200: '#a5f3fc',

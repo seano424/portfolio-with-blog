@@ -15,13 +15,15 @@ type Post = {
 
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div>
+    <div className="dark:text-white">
       <div className="grid gap-3">
-        <h1 className="text-4xl capitalize font-black">{post.title}</h1>
+        <h1 className="text-4xl font-black capitalize xl:text-6xl">
+          {post.title}
+        </h1>
         <Date dateString={post.date!} />
       </div>
       <div
-        className="prose max-w-none my-10"
+        className="prose my-5 max-w-none dark:text-white"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
     </div>

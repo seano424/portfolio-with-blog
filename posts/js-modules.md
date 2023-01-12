@@ -1,6 +1,6 @@
 ---
 title: 'Learning about ES6 Modules and JS Bundlers'
-date: '2023-01-10'
+date: '2023-01-06'
 tags: ['JS Module Bundlers', 'ES6', 'Webpack']
 excerpt: 'Here is some info on ES6 modules, what JS Bundlers are and why we have them, with some examples.'
 ---

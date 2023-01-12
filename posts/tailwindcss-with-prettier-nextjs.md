@@ -1,6 +1,6 @@
 ---
 title: 'How to configure Tailwind CSS with Next.js!'
-date: '2023-01-06'
+date: '2023-01-10'
 tags: ['TailwindCSS', 'Next.js', 'Prettier', 'Config']
 excerpt: 'I like to setup all of my Next.js projects with TailwindCSS. Here is my basic configuration for each one of the projects I create.'
 ---

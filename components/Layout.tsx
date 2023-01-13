@@ -5,9 +5,9 @@ import { Inter } from '@next/font/google'
 import { PropsWithChildren, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-import { themeAtom } from 'store'
 import Cursor from './Cursor'
 import Header from './Header'
+import { themeAtom } from 'store'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -61,8 +61,8 @@ const Layout = ({ children }: PropsWithChildren) => {
           </Head>
           {mounted && <Cursor />}
           <Header />
-          <main className="container relative top-20">{children}</main>
-          <footer className="mt-auto top-20 relative flex justify-center gap-3 text-black text-7xl bg-white">
+          <main className="container py-20">{children}</main>
+          <footer className="mt-auto flex justify-center gap-3 bg-white py-5 text-7xl text-black">
             <p>hello</p>
             <p>hello</p>
             <p>hello</p>

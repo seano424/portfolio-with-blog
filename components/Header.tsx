@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ThemeButton from './ThemeButton'
+import MenuIcon from './MenuIcon'
 
 const links = ['home', 'projects', 'about']
 
@@ -19,6 +20,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
+        <MenuIcon />
         <ThemeButton />
       </div>
     </nav>

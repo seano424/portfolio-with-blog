@@ -13,11 +13,11 @@ export default function MenuIcon() {
   }, [theme])
 
   return (
-    <button>
+    <button aria-label="Toggle Sidebar Menu" className="lg:hidden">
       <Squash
         label="show/hide sidemenu"
         rounded
-        size={24}
+        size={32}
         color={color}
         toggle={setShowSideBar}
         toggled={showSideBar}

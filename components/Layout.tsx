@@ -4,6 +4,7 @@ import { useAtom } from 'jotai'
 import { Inter } from '@next/font/google'
 import { PropsWithChildren, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import SidebarMenu from './SidebarMenu'
 
 import Cursor from './Cursor'
 import Header from './Header'
@@ -61,6 +62,7 @@ const Layout = ({ children }: PropsWithChildren) => {
           </Head>
           {mounted && <Cursor />}
           <Header />
+          <SidebarMenu />
           <main className="container py-20">{children}</main>
           <footer className="mt-auto flex justify-center gap-3 bg-white py-5 text-7xl text-black">
             <p>hello</p>

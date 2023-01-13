@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useAtom } from 'jotai'
-import { themeAtom } from 'store'
+import { themeAtom, sideBarAtom } from 'store'
 import { Squash } from 'hamburger-react'
 
 export default function MenuIcon() {
   const [theme] = useAtom(themeAtom)
   const [color, setColor] = useState('white')
-  const [showSideBar, setShowSideBar] = useState(false)
+  const [showSideBar, setShowSideBar] = useAtom(sideBarAtom)
 
   useEffect(() => {
     setColor(theme === 'dark' ? 'white' : 'black')

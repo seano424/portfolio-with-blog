@@ -60,8 +60,8 @@ const Layout = ({ children }: PropsWithChildren) => {
           </Head>
           {mounted && <Cursor />}
           <Header />
-          <main className="container relative top-20 py-10">{children}</main>
-          <footer className="mt-auto flex justify-center gap-3">
+          <main className="container relative top-20">{children}</main>
+          <footer className="mt-auto top-20 relative flex justify-center gap-3 text-black text-7xl bg-white">
             <p>hello</p>
             <p>hello</p>
             <p>hello</p>

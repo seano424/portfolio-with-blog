@@ -44,7 +44,7 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <div className="flex min-h-[40px] justify-center space-x-8">
+      <div className="flex justify-center gap-8">
         {socialLinks.map((link) => (
           <Link
             href={link.href}

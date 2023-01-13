@@ -1,10 +1,11 @@
-import { PropsWithChildren, useEffect, useState } from 'react'
-import Head from 'next/head'
 import clsx from 'clsx'
-import { Inter } from '@next/font/google'
+import Head from 'next/head'
 import { useAtom } from 'jotai'
-import { themeAtom } from 'store'
+import { Inter } from '@next/font/google'
+import { PropsWithChildren, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+
+import { themeAtom } from 'store'
 import Cursor from './Cursor'
 import Header from './Header'
 

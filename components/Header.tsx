@@ -5,7 +5,7 @@ const links = ['home', 'projects', 'about']
 
 export default function Header() {
   return (
-    <nav className="fixed h-20 flex z-40 w-full border bg-light/90 filter backdrop-blur-sm dark:bg-dark/90">
+    <nav className="fixed z-40 flex h-20 w-full bg-opacity-90 filter backdrop-blur-sm">
       <div className="container flex items-center justify-between">
         <ul className="hidden items-center justify-center gap-12 lg:flex">
           {links.map((link) => (

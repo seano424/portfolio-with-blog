@@ -6,6 +6,7 @@ import { useAtom } from 'jotai'
 import { themeAtom } from 'store'
 import { motion } from 'framer-motion'
 import Cursor from './Cursor'
+import ThemeButton from './ThemeButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,7 +41,7 @@ const Layout = ({ children }: PropsWithChildren) => {
         backgroundColor: theme === 'dark' ? 'var(--dark)' : 'var(--light)',
       }}
       className={clsx(
-        'flex min-h-screen flex-col transition-all duration-100 ease-linear',
+        'flex min-h-screen flex-col transition-all duration-100 ease-linear dark:bg-opacity-25',
         inter.className
       )}
     >
@@ -52,12 +53,15 @@ const Layout = ({ children }: PropsWithChildren) => {
       </Head>
       {mounted && <Cursor />}
       <main className="container py-10">
-        <button
-          className="button my-4 w-max"
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        >
-          toggle theme
-        </button>
+        <div className="flex items-center justify-between ">
+          {/* <ThemeButton /> */}
+          <button
+            className="button my-4 w-max"
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          >
+            toggle theme
+          </button>
+        </div>
         {children}
       </main>
       <footer className="mt-auto flex justify-center gap-3">

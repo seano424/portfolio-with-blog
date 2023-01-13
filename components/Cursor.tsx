@@ -69,7 +69,7 @@ export default function Cursor() {
     <AnimatePresence>
       {mounted && (
         <motion.div
-          transition={{ delay: 3 }}
+          transition={{ delay: 1 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

@@ -6,18 +6,13 @@ import { useAtom } from 'jotai'
 import { themeAtom } from 'store'
 import { motion } from 'framer-motion'
 import Cursor from './Cursor'
-import ThemeButton from './ThemeButton'
+import Header from './Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
 const Layout = ({ children }: PropsWithChildren) => {
-  const [theme, setTheme] = useAtom(themeAtom)
+  const [theme] = useAtom(themeAtom)
   const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    document.body.classList.remove('light', 'dark')
-    document.body.classList.add(theme)
-  }, [theme])
 
   useEffect(() => {
     console.log(
@@ -52,18 +47,8 @@ const Layout = ({ children }: PropsWithChildren) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {mounted && <Cursor />}
-      <main className="container py-10">
-        <div className="flex items-center justify-between ">
-          {/* <ThemeButton /> */}
-          <button
-            className="button my-4 w-max"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          >
-            toggle theme
-          </button>
-        </div>
-        {children}
-      </main>
+      <Header />
+      <main className="container relative top-20 py-10">{children}</main>
       <footer className="mt-auto flex justify-center gap-3">
         <p>hello</p>
         <p>hello</p>

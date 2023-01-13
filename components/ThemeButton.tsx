@@ -29,6 +29,11 @@ export default function ThemeButton() {
   }
 
   useEffect(() => {
+    document.body.classList.remove('light', 'dark')
+    document.body.classList.add(theme)
+  }, [theme])
+
+  useEffect(() => {
     setIcon(() =>
       theme === 'dark' ? (
         <BoltIcon className="w-7 text-cyan-300 transition-opacity delay-75 duration-500 ease-linear" />
@@ -39,16 +44,18 @@ export default function ThemeButton() {
   }, [theme])
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      <m.button
-        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-        variants={themeVariants}
-        initial="hidden"
-        animate="show"
-        exit="exit"
-      >
-        {icon}
-      </m.button>
-    </AnimatePresence>
+    <div id="themeButton">
+      <AnimatePresence mode="wait" initial={false}>
+        <m.button
+          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          variants={themeVariants}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
+          {icon}
+        </m.button>
+      </AnimatePresence>
+    </div>
   )
 }

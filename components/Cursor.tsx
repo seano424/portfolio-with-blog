@@ -32,7 +32,7 @@ export default function Cursor() {
 
     const handleLinkHoverEvents = () => {
       document
-        .querySelectorAll('a, #hamburger, #themeButton, button')
+        .querySelectorAll('a, #hamburger, #themeButton, button, .button')
         .forEach((el) => {
           el.addEventListener('mouseover', () => setLinkHovered(true))
           el.addEventListener('mouseout', () => setLinkHovered(false))

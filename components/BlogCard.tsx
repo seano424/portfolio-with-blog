@@ -20,7 +20,7 @@ const BlogCard = (props: PostType) => {
                 <li
                   key={i}
                   className={clsx(
-                    'rounded-full border-2 border-white bg-primary-100 px-4 py-1 text-sm font-semibold uppercase tracking-tighter'
+                    'rounded-full border-2 border-white bg-primary-100 px-4 py-1 text-sm font-semibold uppercase tracking-tighter text-primary-900'
                   )}
                 >
                   {tag}

@@ -40,13 +40,13 @@ export default function Hero() {
           fill
         />
       </div>
-      <div className="text-center">
-        <p className="text-4xl font-black text-primary-900 transition-all duration-100 ease-linear dark:text-white xl:max-w-7xl xl:text-7xl">
-          Hi! 👋 My name is Sean. I build websites with modern tools &
-          technologies!
-        </p>
-      </div>
-      <div className="pb-10">
+
+      <p className="text-center text-4xl font-black text-primary-900 transition-all duration-100 ease-linear dark:text-white xl:max-w-7xl xl:text-7xl">
+        Hi! 👋 My name is Sean. I build websites with modern tools &
+        technologies!
+      </p>
+
+      <div>
         <div className="flex justify-center gap-8">
           {socialLinks.map((link) => (
             <Link
@@ -69,6 +69,17 @@ export default function Hero() {
             </Link>
           ))}
         </div>
+      </div>
+
+      <div className="flex flex-col gap-5">
+        <a
+          href="mailto:soreilly424@gmail.com"
+          className="transform rounded-full border-4 bg-primary-900 px-4 py-3 text-left text-lg font-black uppercase tracking-tighter text-light transition-transform duration-300 ease-linear hover:scale-125 dark:border-white "
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Get in touch
+        </a>
       </div>
     </section>
   )

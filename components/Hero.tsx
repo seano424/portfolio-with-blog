@@ -76,11 +76,11 @@ export default function Hero() {
         <div className="flex flex-col gap-5">
           <a
             href="mailto:soreilly424@gmail.com"
-            className="transform rounded-full border-4 bg-primary-900 px-4 py-3 text-left text-lg font-black uppercase tracking-tighter text-light transition-transform duration-300 ease-linear hover:scale-125 dark:border-white "
+            className="transform rounded-full border-4 border-primary-300 bg-light p-4 text-left text-xl font-extrabold text-primary-900 transition-all duration-300 ease-linear hover:scale-105 dark:border-white  dark:bg-primary-300 dark:text-primary-900 xl:text-2xl"
             target="_blank"
             rel="noreferrer noopener"
           >
-            Get in touch
+            Get in contact!
           </a>
         </div>
       </div>

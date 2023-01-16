@@ -76,14 +76,14 @@ export default function SidebarMenu() {
                   i === 0 && 'duration-200',
                   i === 1 && 'duration-300',
                   i === 2 && 'duration-500',
-                  'p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all ease-linear hover:text-primary-300 dark:text-white dark:hover:text-fuchsia-400 md:text-7xl'
+                  'p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all ease-linear hover:text-dark dark:text-white dark:hover:text-fuchsia-400 md:text-7xl'
                 )}
               >
                 {link.title}
               </a>
             ))}
             <Link
-              className="p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all duration-700 ease-linear hover:text-primary-300 dark:text-white dark:hover:text-fuchsia-400 md:text-7xl"
+              className="p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all duration-700 ease-linear hover:text-dark dark:text-white dark:hover:text-fuchsia-400 md:text-7xl"
               href="mailto:soreilly424@gmail.com"
               target="_blank"
               rel="noreferrer noopener"

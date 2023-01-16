@@ -9,7 +9,7 @@ export default function MenuIcon() {
   const [showSideBar, setShowSideBar] = useAtom(sideBarAtom)
 
   useEffect(() => {
-    setColor(theme === 'dark' ? 'white' : 'black')
+    setColor(theme === 'dark' ? 'var(--light)' : 'var(--dark)')
   }, [theme])
 
   return (
@@ -17,6 +17,7 @@ export default function MenuIcon() {
       <Squash
         label="show/hide sidemenu"
         rounded
+        distance="sm"
         size={32}
         color={color}
         toggle={setShowSideBar}

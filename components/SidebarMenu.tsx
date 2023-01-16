@@ -16,9 +16,9 @@ const mobileMenuVariants = {
     },
   },
   exit: {
-    x: -600,
+    x: -1000,
     transition: {
-      duration: 0.4,
+      duration: 0.5,
       ease: 'linear',
     },
   },
@@ -63,7 +63,7 @@ export default function SidebarMenu() {
           initial="hidden"
           animate="show"
           exit="exit"
-          className="fixed z-30 flex h-full min-h-screen w-full flex-col gap-8 md:w-2/3 lg:hidden"
+          className="fixed z-30 flex h-full min-h-screen w-full flex-col gap-8  lg:hidden"
         >
           <div className="absolute inset-0 shadow-2xl filter backdrop-blur"></div>
           <div className="container absolute inset-0 flex flex-col gap-10 pt-40 md:pl-16">

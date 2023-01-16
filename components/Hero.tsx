@@ -30,8 +30,8 @@ const socialLinks = [
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center gap-10">
-      <div className="relative h-64 w-64 rounded-full border-8 border-primary-300 transition-all duration-200 ease-in-out dark:border-white xl:h-96 xl:w-96">
+    <section className="flex flex-col items-center gap-10 py-10">
+      <div className="relative h-64 w-64 rounded-full border-8 border-primary-300 transition-all duration-200 ease-in-out dark:border-white xl:h-80 xl:w-80">
         <Image
           className="rounded-full object-cover"
           src="/images/me.png"
@@ -39,6 +39,12 @@ export default function Hero() {
           priority
           fill
         />
+      </div>
+      <div className="text-center">
+        <p className="text-4xl font-black text-primary-900 transition-all duration-100 ease-linear dark:text-white xl:max-w-7xl xl:text-7xl">
+          Hi! 👋 My name is Sean. I build websites with modern tools &
+          technologies!
+        </p>
       </div>
       <div className="pb-10">
         <div className="flex justify-center gap-8">

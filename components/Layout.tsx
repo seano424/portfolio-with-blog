@@ -63,7 +63,7 @@ const Layout = ({ children }: PropsWithChildren) => {
           {mounted && <Cursor />}
           <Header />
           <SidebarMenu />
-          <main className="container py-20">{children}</main>
+          <main className="py-20">{children}</main>
           <footer className=" flex flex-wrap justify-center gap-3 bg-white py-5 text-7xl text-black">
             <p>hello</p>
             <p>hello</p>

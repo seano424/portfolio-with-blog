@@ -14,7 +14,7 @@ const BlogGrid = ({ heading, posts }: BlogGridProps) => {
   return (
     <div className="grid gap-6">
       {heading && (
-        <h2 className="flex gap-3 text-4xl font-black uppercase tracking-tighter dark:text-white lg:text-7xl">
+        <h2 className="flex gap-3 text-4xl font-black uppercase tracking-tighter text-primary-900 dark:text-white lg:text-7xl">
           {heading}
           <span className="text-base lg:text-xl">{posts.length}</span>
         </h2>
@@ -26,7 +26,7 @@ const BlogGrid = ({ heading, posts }: BlogGridProps) => {
             {post.excerpt && (
               <p
                 className={clsx(
-                  'prose px-3 text-lg font-light text-black transition-all duration-100 ease-linear dark:text-white md:text-xl',
+                  'prose px-3 text-lg font-light text-primary-900 transition-all duration-100 ease-linear dark:text-white md:text-xl',
                   inter.className
                 )}
               >

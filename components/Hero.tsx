@@ -31,7 +31,7 @@ const socialLinks = [
 export default function Hero() {
   return (
     <section className="flex flex-col items-center gap-10">
-      <div className="relative h-64 w-64 rounded-full border-8 border-primary-300 transition-all duration-200 ease-in-out dark:border-white">
+      <div className="relative h-64 w-64 rounded-full border-8 border-primary-300 transition-all duration-200 ease-in-out dark:border-white xl:h-96 xl:w-96">
         <Image
           className="rounded-full object-cover"
           src="/images/me.png"

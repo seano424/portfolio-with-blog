@@ -9,7 +9,7 @@ export default function MenuIcon() {
   const [showSideBar, setShowSideBar] = useAtom(sideBarAtom)
 
   useEffect(() => {
-    setColor(theme === 'dark' ? 'var(--light)' : 'var(--dark)')
+    setColor(theme === 'dark' ? 'var(--primary-300)' : 'var(--primary-900)')
   }, [theme])
 
   return (

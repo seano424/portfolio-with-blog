@@ -63,10 +63,10 @@ export default function SidebarMenu() {
           initial="hidden"
           animate="show"
           exit="exit"
-          className="fixed z-30 flex min-h-screen w-full flex-col gap-8 md:w-2/3 lg:hidden"
+          className="fixed z-30 flex h-full min-h-screen w-full flex-col gap-8 md:w-2/3 lg:hidden"
         >
           <div className="absolute inset-0 shadow-2xl filter backdrop-blur"></div>
-          <div className="container absolute inset-0 flex flex-col justify-center gap-20 md:pl-16">
+          <div className="container absolute inset-0 flex flex-col gap-10 pt-40 md:pl-16">
             {mobileNavLinks.map((link, i) => (
               <a
                 onClick={(e) => handleClick(e, link.href)}
@@ -76,14 +76,14 @@ export default function SidebarMenu() {
                   i === 0 && 'duration-200',
                   i === 1 && 'duration-300',
                   i === 2 && 'duration-500',
-                  'p-1 text-left text-5xl font-black uppercase  tracking-tighter text-primary-blue transition-all ease-linear hover:text-fuchsia-400 dark:text-white dark:hover:text-cyan-300 sm:text-6xl md:text-7xl'
+                  'p-1 text-left text-5xl font-black uppercase  tracking-tighter text-primary-blue transition-all ease-linear hover:text-cyan-300 dark:text-white dark:hover:text-fuchsia-400 sm:text-6xl md:text-7xl'
                 )}
               >
                 {link.title}
               </a>
             ))}
             <Link
-              className='p-1 text-left text-5xl font-black uppercase  tracking-tighter text-primary-blue transition-all ease-linear hover:text-fuchsia-400 dark:text-white dark:hover:text-cyan-300 sm:text-6xl md:text-7xl duration-700'
+              className="p-1 text-left text-5xl font-black uppercase  tracking-tighter text-primary-blue transition-all duration-700 ease-linear hover:text-cyan-300 dark:text-white dark:hover:text-fuchsia-400 sm:text-6xl md:text-7xl"
               href="mailto:soreilly424@gmail.com"
               target="_blank"
               rel="noreferrer noopener"

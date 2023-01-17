@@ -24,7 +24,7 @@ const links = [
 
 export default function Header() {
   return (
-    <nav className="fixed z-40 flex h-20 w-full bg-light bg-transparent bg-opacity-90 py-4 filter backdrop-blur-sm dark:bg-dark xl:bg-inherit">
+    <nav className="fixed z-40 flex h-20 w-full bg-light bg-transparent bg-opacity-90 py-4 filter backdrop-blur-sm transition-all duration-75 ease-linear dark:bg-transparent dark:bg-dark xl:bg-inherit">
       <div className="container flex items-center justify-between">
         <Avatar />
         <ul className="hidden items-center justify-center gap-12 lg:flex">

@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useAtom } from 'jotai'
 import { useRouter } from 'next/router'
-import { sideBarAtom, themeAtom } from 'store'
+import { sideBarAtom } from 'store'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const mobileMenuVariants = {
@@ -41,10 +41,7 @@ const mobileNavLinks = [
 
 export default function SidebarMenu() {
   const [isOpen, setIsOpen] = useAtom(sideBarAtom)
-  const [theme] = useAtom(themeAtom)
   const router = useRouter()
-
-  const isDark = theme === 'isDark'
 
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -63,10 +60,10 @@ export default function SidebarMenu() {
           initial="hidden"
           animate="show"
           exit="exit"
-          className="fixed z-30 flex h-full min-h-screen w-full flex-col gap-8  lg:hidden"
+          className="fixed z-30 flex h-full min-h-screen w-full flex-col gap-8 lg:hidden"
         >
           <div className="absolute inset-0 shadow-2xl filter backdrop-blur"></div>
-          <div className="container absolute inset-0 flex flex-col gap-10 pt-40 md:pl-16">
+          <div className="container absolute inset-0 flex flex-col gap-10  pt-40">
             {mobileNavLinks.map((link, i) => (
               <a
                 onClick={(e) => handleClick(e, link.href)}
@@ -76,14 +73,14 @@ export default function SidebarMenu() {
                   i === 0 && 'duration-200',
                   i === 1 && 'duration-300',
                   i === 2 && 'duration-500',
-                  'p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all ease-linear hover:text-dark dark:text-white dark:hover:text-fuchsia-400 md:text-7xl'
+                  'p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all ease-linear hover:text-primary-blue dark:text-white dark:hover:text-cyan-300 md:text-7xl'
                 )}
               >
                 {link.title}
               </a>
             ))}
             <Link
-              className="p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all duration-700 ease-linear hover:text-dark dark:text-white dark:hover:text-fuchsia-400 md:text-7xl"
+              className="p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all duration-700 ease-linear hover:text-primary-blue dark:text-white dark:hover:text-cyan-300 md:text-7xl"
               href="mailto:soreilly424@gmail.com"
               target="_blank"
               rel="noreferrer noopener"

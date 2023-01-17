@@ -15,7 +15,7 @@ type Post = {
 
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div className="container dark:text-white">
+    <div className="container pt-10 dark:text-white lg:pt-20">
       <div className="grid gap-3">
         <h1 className="text-4xl font-black capitalize xl:text-6xl">
           {post.title}

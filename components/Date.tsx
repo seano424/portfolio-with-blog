@@ -2,7 +2,7 @@ import { parseISO, format } from 'date-fns'
 import { Inter } from '@next/font/google'
 import clsx from 'clsx'
 
-const inter = Inter()
+const inter = Inter({})
 
 type Props = {
   dateString: string
@@ -13,7 +13,10 @@ const Date = ({ dateString }: Props) => {
 
   return (
     <time
-      className={clsx(inter.className, 'font-light text-slate-900')}
+      className={clsx(
+        inter.className,
+        'font-light text-dark dark:text-primary-100'
+      )}
       dateTime={dateString}
     >
       {format(date, 'LLLL d, yyyy')}

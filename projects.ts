@@ -4,8 +4,8 @@ export const projects = [
     excerpt:
       'This website is made from Next.js, content comes from Sanity CMS, styled with Tailwind and deployed on Vercel.',
     tools: ['Tailwind', 'Next.js', 'Vercel', 'Sanity'],
-    image: '',
-    link: '',
+    image: '/images/projects/kmb.png',
+    link: 'https://karriemariebaxley.com/',
   },
 ]
 

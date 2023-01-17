@@ -7,7 +7,7 @@ import clsx from 'clsx'
 const BlogCard = (props: PostType) => {
   const { tags, title, date, id } = props
   return (
-    <Link href={`/posts/${id}`}>
+    <Link href={`/articles/${id}`}>
       <div
         className={clsx(
           'grid gap-10 rounded-3xl border-4 border-primary-300 bg-primary-100 p-5 leading-loose text-slate-900 shadow transition-all duration-100 ease-linear dark:border-white dark:bg-primary-300'

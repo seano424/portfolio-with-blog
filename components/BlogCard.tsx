@@ -19,9 +19,7 @@ const BlogCard = (props: PostType) => {
               tags.map((tag, i) => (
                 <li
                   key={i}
-                  className={clsx(
-                    'rounded-full border-2 border-white bg-primary-100 px-4 py-1 text-sm font-semibold uppercase tracking-tighter text-primary-900'
-                  )}
+                  className="rounded-full border-2 border-white bg-primary-100 px-4 py-1 text-sm font-semibold uppercase tracking-tighter text-primary-900"
                 >
                   {tag}
                 </li>
@@ -29,11 +27,7 @@ const BlogCard = (props: PostType) => {
           </ul>
           <Bars3BottomRightIcon className="h-7 w-7 flex-shrink-0 -scale-x-100 transform rounded-3xl border-2 border-white p-1 text-white transition-all duration-200 ease-linear hover:-scale-x-125 hover:scale-y-125" />
         </div>
-        <h4
-          className={clsx(
-            'font-mono text-xl font-black tracking-tighter md:text-3xl'
-          )}
-        >
+        <h4 className="font-mono text-xl font-black tracking-tighter md:text-3xl">
           {title}
         </h4>
         <Date dateString={date ?? ''} card />

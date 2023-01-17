@@ -27,7 +27,7 @@ const mobileMenuVariants = {
 const mobileNavLinks = [
   {
     title: 'Home',
-    href: 'home',
+    href: '',
   },
   {
     title: 'Projects',
@@ -53,7 +53,7 @@ export default function SidebarMenu() {
   ) => {
     e.preventDefault()
     setIsOpen(false)
-    router.push(href)
+    router.push(`/${href}`)
   }
 
   return (
@@ -71,8 +71,8 @@ export default function SidebarMenu() {
             {mobileNavLinks.map((link, i) => (
               <a
                 onClick={(e) => handleClick(e, link.href)}
-                href={`/${link.href}`}
                 key={link.title}
+                href={`/${link.href}`}
                 className={clsx(
                   i === 0 && 'duration-200',
                   i === 1 && 'duration-300',

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import projects from 'projects'
+import GitHub from '@/icons/GitHub'
 
 export default function Projects() {
   return (
@@ -37,9 +38,18 @@ export default function Projects() {
                   </li>
                 ))}
               </ul>
-              <a className="primary-button" href={project.link}>
-                Visit Site
-              </a>
+              <div className="flex items-center gap-3">
+                <a className="primary-button" href={project.link}>
+                  Visit Site
+                </a>
+                <a
+                  href={project.github}
+                  className="group flex items-center justify-center rounded-full border-4 p-3 transition-all duration-200 ease-linear hover:border-primary-300 dark:hover:border-primary-100"
+                >
+                  <span className="sr-only">GitHub</span>
+                  <GitHub className="h-7 w-7 font-black text-emerald-500 transition-all duration-300 ease-linear group-hover:scale-105 group-hover:text-primary-500 dark:text-green-200 dark:group-hover:text-primary-100 lg:h-8 lg:w-8" />
+                </a>
+              </div>
             </div>
             <div className="relative aspect-[1.77/1] w-full rounded-xl border-8 border-white lg:h-[420px]">
               <Image

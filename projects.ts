@@ -6,6 +6,7 @@ export const projects = [
     tools: ['Tailwind', 'Next.js', 'Vercel', 'Sanity'],
     image: '/images/projects/kmb.png',
     link: 'https://karriemariebaxley.com/',
+    github: 'https://github.com/seano424/kmb-art',
   },
 ]
 

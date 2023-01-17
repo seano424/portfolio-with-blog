@@ -15,7 +15,7 @@ const BlogGrid = ({ heading, posts }: BlogGridProps) => {
     <section className="pl-base lg:pl-auto container grid gap-6">
       {heading && (
         <h2 className="flex gap-1 text-5xl font-black uppercase tracking-tighter text-primary-900 sm:text-7xl">
-          <span className="bg-gradient-to-r from-primary-900 to-primary-blue bg-clip-text pr-1 text-transparent">
+          <span className="bg-gradient-to-r from-primary-900 to-primary-blue bg-clip-text pr-1 text-transparent dark:from-primary-100 dark:to-primary-700">
             {heading}
           </span>
           <span className="text-lg lg:text-xl">{posts.length}</span>

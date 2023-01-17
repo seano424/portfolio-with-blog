@@ -34,6 +34,10 @@ const mobileNavLinks = [
     href: 'projects',
   },
   {
+    title: 'Articles',
+    href: 'articles',
+  },
+  {
     title: 'About',
     href: 'about',
   },

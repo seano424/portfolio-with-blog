@@ -27,7 +27,7 @@ const BlogCard = (props: PostType) => {
                 </li>
               ))}
           </ul>
-          <Bars3BottomRightIcon className="h-10 -scale-x-100 transform rounded border border-white p-1 text-white" />
+          <Bars3BottomRightIcon className="h-7 w-7 flex-shrink-0 -scale-x-100 transform rounded-3xl border-2 border-white p-1 text-white transition-all duration-200 ease-linear hover:-scale-x-125 hover:scale-y-125" />
         </div>
         <h4
           className={clsx(
@@ -36,7 +36,7 @@ const BlogCard = (props: PostType) => {
         >
           {title}
         </h4>
-        <Date dateString={date ?? ''} />
+        <Date dateString={date ?? ''} card />
       </div>
     </Link>
   )

@@ -1,7 +1,7 @@
 ---
 title: 'Configuring CSS Global Variables with Tailwind'
 date: '2023-01-12'
-tags: ['Jotai', 'Tailwind', 'Framer Motion']
+tags: ['CSS Variables', 'Jotai', 'Tailwind', 'Framer Motion']
 excerpt: "I was really wanting to use Framer Motion to animate colors. However there was a caveat - I needed Global CSS Variables available to me and I am using Tailwind CSS. Here's my guided solution to that problem"
 ---
 

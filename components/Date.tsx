@@ -6,16 +6,18 @@ const inter = Inter({})
 
 type Props = {
   dateString: string
+  card?: boolean
 }
 
-const Date = ({ dateString }: Props) => {
+const Date = ({ dateString, card = false }: Props) => {
   const date = parseISO(dateString)
 
   return (
     <time
       className={clsx(
         inter.className,
-        'font-light text-dark dark:text-primary-100'
+        'font-light text-dark',
+        card ? 'dark:text-dark' : 'dark:text-primary-100'
       )}
       dateTime={dateString}
     >

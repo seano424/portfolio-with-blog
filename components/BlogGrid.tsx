@@ -12,14 +12,14 @@ interface BlogGridProps {
 
 const BlogGrid = ({ heading, posts }: BlogGridProps) => {
   return (
-    <div className="container grid gap-6">
+    <div className="pl-base lg:pl-auto container grid gap-6">
       {heading && (
         <h2 className="flex gap-3 text-4xl font-black uppercase tracking-tighter text-primary-900 dark:text-white lg:text-7xl">
           {heading}
           <span className="text-base lg:text-xl">{posts.length}</span>
         </h2>
       )}
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {posts.map((post) => (
           <div className="grid h-min gap-6" key={post.id}>
             <BlogCard {...post} />

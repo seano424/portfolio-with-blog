@@ -5,6 +5,8 @@ import {
 } from 'next'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '@/components/Date'
+import { useRouter } from 'next/router'
+import { ArrowLeftIcon } from '@heroicons/react/24/solid'
 
 type Post = {
   id: string
@@ -14,9 +16,18 @@ type Post = {
 }
 
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { back } = useRouter()
+
   return (
     <div className="container pt-10 dark:text-white lg:pt-20">
       <div className="grid gap-3">
+        <button
+          onClick={() => back()}
+          className="group w-max transform rounded-3xl bg-dark px-4 py-3 transition-all duration-200 ease-linear hover:scale-105 dark:bg-light"
+          aria-label="Go back button"
+        >
+          <ArrowLeftIcon className="h-4 w-4 transform text-light transition-all duration-200 ease-linear group-hover:scale-105 dark:text-dark" />
+        </button>
         <h1 className="text-4xl font-black capitalize xl:text-6xl">
           {post.title}
         </h1>

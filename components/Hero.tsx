@@ -30,7 +30,7 @@ const socialLinks = [
 
 export default function Hero() {
   return (
-    <section className="relative py-10">
+    <section className="relative overflow-hidden py-10">
       <div className="tranform absolute bottom-72 -left-[123%] right-0 -top-full z-0 -rotate-[20deg] bg-primary-100/40 transition-all ease-linear dark:opacity-0  lg:bottom-0"></div>
       <div className="container relative z-10 flex flex-col items-center gap-10">
         <div className="relative h-64 w-64 rounded-full border-8 border-primary-300 transition-all duration-200 ease-in-out dark:border-white xl:h-80 xl:w-80">

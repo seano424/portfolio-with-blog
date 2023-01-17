@@ -77,6 +77,7 @@ export default function SidebarMenu() {
                   i === 0 && 'duration-200',
                   i === 1 && 'duration-300',
                   i === 2 && 'duration-500',
+                  i === 3 && 'duration-700',
                   'p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all ease-linear hover:text-primary-blue dark:text-white dark:hover:text-cyan-300 md:text-7xl'
                 )}
               >
@@ -84,7 +85,7 @@ export default function SidebarMenu() {
               </a>
             ))}
             <Link
-              className="p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all duration-700 ease-linear hover:text-primary-blue dark:text-white dark:hover:text-cyan-300 md:text-7xl"
+              className="p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all duration-1000 ease-linear hover:text-primary-blue dark:text-white dark:hover:text-cyan-300 md:text-7xl"
               href="mailto:soreilly424@gmail.com"
               target="_blank"
               rel="noreferrer noopener"

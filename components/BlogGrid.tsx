@@ -12,7 +12,7 @@ interface BlogGridProps {
 
 const BlogGrid = ({ heading, posts }: BlogGridProps) => {
   return (
-    <div className="pl-base lg:pl-auto container grid gap-6">
+    <section className="pl-base lg:pl-auto container grid gap-6">
       {heading && (
         <h2 className="flex gap-3 text-4xl font-black uppercase tracking-tighter text-primary-900 dark:text-white lg:text-7xl">
           {heading}
@@ -36,7 +36,7 @@ const BlogGrid = ({ heading, posts }: BlogGridProps) => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -3,6 +3,7 @@ import { getSortedPostsData } from '@/lib/posts'
 import { PostType } from '@/lib/types'
 import Hero from '@/components/Hero'
 import BlogGrid from '@/components/BlogGrid'
+import Projects from '@/components/Projects'
 
 export default function Home({
   posts,
@@ -10,6 +11,7 @@ export default function Home({
   return (
     <>
       <Hero />
+      <Projects />
       <BlogGrid posts={posts} heading="Articles" />
     </>
   )

@@ -60,10 +60,10 @@ export default function Hero() {
                 rel="noreferrer"
               >
                 {link.icon === 'GitHub' && (
-                  <GitHub className="h-8 w-8 text-green-500 transition-all duration-300 ease-linear hover:text-primary-pink dark:text-green-200 dark:hover:text-primary-pink" />
+                  <GitHub className="h-8 w-8 text-green-500 transition-all duration-300 ease-linear hover:text-primary-900 dark:text-green-200 dark:hover:text-primary-300" />
                 )}
                 {link.icon === 'Twitter' && (
-                  <Twitter className="h-8 w-8 text-blue-500 transition-all duration-200 ease-linear hover:text-primary-pink dark:text-primary-blue dark:hover:text-white" />
+                  <Twitter className="h-8 w-8 text-blue-500 transition-all duration-200 ease-linear hover:text-primary-700 dark:text-primary-blue dark:hover:text-white" />
                 )}
                 {link.icon === 'LinkedIn' && (
                   <LinkedIn className="h-8 w-8 text-primary-pink transition-all duration-700 ease-linear hover:text-primary-blue dark:text-blue-200 dark:hover:text-white" />
@@ -76,11 +76,11 @@ export default function Hero() {
         <div className="flex flex-col gap-5">
           <a
             href="mailto:soreilly424@gmail.com"
-            className="transform rounded-full border-4 border-primary-300 bg-light p-4 text-left text-xl font-extrabold text-primary-900 transition-all duration-300 ease-linear hover:scale-105 dark:border-white  dark:bg-primary-300 dark:text-primary-900 xl:text-2xl"
+            className="primary-button"
             target="_blank"
             rel="noreferrer noopener"
           >
-            Get in contact!
+            Let's get in touch!
           </a>
         </div>
       </div>

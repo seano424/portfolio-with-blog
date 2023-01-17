@@ -16,7 +16,10 @@ export default function Projects() {
 
       <div className="mt-10">
         {projects.map((project, i) => (
-          <div className="flex items-center gap-10" key={i}>
+          <div
+            className="flex flex-col-reverse items-center gap-10 lg:flex-row"
+            key={i}
+          >
             <div className="grid gap-5">
               <h4 className="font-mono text-xl font-black tracking-tighter dark:text-primary-100 md:text-3xl">
                 {project.title}

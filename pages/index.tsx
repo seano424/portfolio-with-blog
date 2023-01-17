@@ -1,16 +1,8 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import { createClient } from 'next-sanity'
 import { getSortedPostsData } from '@/lib/posts'
 import { PostType } from '@/lib/types'
 import Hero from '@/components/Hero'
 import BlogGrid from '@/components/BlogGrid'
-
-const client = createClient({
-  projectId: 'n93acrcs',
-  dataset: 'production',
-  apiVersion: '2023-01-10',
-  useCdn: false,
-})
 
 export default function Home({
   posts,
@@ -25,14 +17,12 @@ export default function Home({
 
 export const getStaticProps: GetStaticProps<{
   posts: PostType[]
-  sanityPosts: any
 }> = async () => {
   const allPostsData: PostType[] = getSortedPostsData()
-  const sanityPosts = await client.fetch(`*[_type == "post"]`)
+
   return {
     props: {
       posts: allPostsData,
-      sanityPosts,
     },
   }
 }

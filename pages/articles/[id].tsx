@@ -7,13 +7,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '@/components/Date'
 import { useRouter } from 'next/router'
 import { ArrowLeftIcon } from '@heroicons/react/24/solid'
-
-type Post = {
-  id: string
-  title?: string
-  date?: string
-  contentHtml: string
-}
+import { PostType } from '@/lib/types'
 
 const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { back } = useRouter()
@@ -35,7 +29,7 @@ const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
       </div>
       <div
         className="rich-text prose my-5 max-w-none dark:text-white"
-        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        dangerouslySetInnerHTML={{ __html: post.contentHtml! }}
       />
     </div>
   )
@@ -54,7 +48,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps = async ({
   params,
 }: GetStaticPropsContext<{ id: string }>) => {
-  const postData: Post = await getPostData(params!.id)
+  const postData: PostType = await getPostData(params!.id)
   return {
     props: {
       post: postData,

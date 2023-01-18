@@ -5,6 +5,7 @@ import { Inter } from '@next/font/google'
 import { PropsWithChildren, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import SidebarMenu from './SidebarMenu'
+import Footer from './Footer'
 
 import Cursor from './Cursor'
 import Header from './Header'
@@ -64,9 +65,7 @@ const Layout = ({ children }: PropsWithChildren) => {
           <Header />
           <SidebarMenu />
           <main className="flex-1 py-20">{children}</main>
-          <footer className="flex justify-center gap-3 py-5 text-sm text-black dark:text-white">
-            <p>© 2022 Sean O'Reilly. Front-end Developer. 🐋</p>
-          </footer>
+          <Footer />
         </motion.div>
       )}
     </AnimatePresence>

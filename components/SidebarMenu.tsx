@@ -64,10 +64,10 @@ export default function SidebarMenu() {
           initial="hidden"
           animate="show"
           exit="exit"
-          className="fixed z-30 flex h-full min-h-screen w-full flex-col gap-8 lg:hidden"
+          className="fixed z-30 flex h-full min-h-screen w-full flex-col gap-8 bg-white/70 dark:bg-black/70 lg:hidden"
         >
           <div className="absolute inset-0 shadow-2xl filter backdrop-blur"></div>
-          <div className="container absolute inset-0 flex flex-col gap-10 bg-white/90 pt-40 dark:bg-white/0">
+          <div className="container absolute inset-0 flex flex-col gap-10 pt-40">
             {mobileNavLinks.map((link, i) => (
               <a
                 onClick={(e) => handleClick(e, link.href)}

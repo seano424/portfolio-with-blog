@@ -31,9 +31,19 @@ const socialLinks = [
 export default function Home() {
   return (
     <section className="py-base relative overflow-hidden">
-      <div className="tranform absolute bottom-72 -left-[123%] right-0 -top-full z-0 -rotate-[20deg] bg-primary-300/50 transition-all ease-linear dark:opacity-0  lg:bottom-0"></div>
+      <div className="tranform absolute bottom-72 -left-[123%] right-0 -top-full z-0 -rotate-[20deg] overflow-hidden bg-primary-300/50 transition-all ease-linear lg:bottom-0 xl:bottom-28 2xl:bottom-0">
+        <div className="absolute inset-0 z-10 bg-white/30"></div>
+        <Image
+          src="/images/water-2.jpg"
+          className="translate-y-16 -scale-x-100 transform object-cover filter  dark:grayscale"
+          alt="background image"
+          priority
+          sizes="100vw"
+          fill
+        />
+      </div>
       <div className="pl-base lg:pl-auto container relative z-10 flex flex-col items-center gap-10">
-        <div className="relative h-64 w-64 rounded-full border-8 border-primary-300 transition-all duration-200 ease-in-out dark:border-white xl:h-80 xl:w-80">
+        <div className="relative h-64 w-64 rounded-full border-8 border-white transition-all duration-200 ease-in-out dark:border-white xl:h-80 xl:w-80">
           <Image
             className="rounded-full object-cover"
             src="/images/me.png"
@@ -46,7 +56,7 @@ export default function Home() {
           />
         </div>
 
-        <h2 className="h2 text-center xl:max-w-7xl">
+        <h2 className="h2 text-center drop-shadow-2xl xl:max-w-7xl">
           Hi! 👋 My name is Sean. I build websites with modern tools &
           technologies!
         </h2>

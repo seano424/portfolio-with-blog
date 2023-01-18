@@ -31,8 +31,8 @@ const socialLinks = [
 export default function Home() {
   return (
     <section className="py-base relative overflow-hidden">
-      <div className="tranform absolute bottom-72 -left-[123%] right-0 -top-full z-0 -rotate-[20deg] overflow-hidden bg-primary-300/50 transition-all ease-linear lg:bottom-0 xl:bottom-28 2xl:bottom-0">
-        <div className="absolute inset-0 z-10 bg-white/30"></div>
+      <div className="tranform absolute bottom-72 -left-[123%] right-0 -top-full z-0 -rotate-[20deg] overflow-hidden transition-all ease-linear lg:bottom-0 xl:bottom-28 2xl:bottom-0">
+        <div className="absolute inset-0 z-10 bg-white/30 dark:opacity-0"></div>
         <Image
           fill
           src="/images/water.png"

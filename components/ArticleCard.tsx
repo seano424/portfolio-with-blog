@@ -14,18 +14,18 @@ const ArticleCard = (props: PostType) => {
         )}
       >
         <div className="flex items-start gap-5">
-          <ul className="flex flex-wrap items-center gap-3">
+          <ul className="flex flex-wrap items-center">
             {tags &&
               tags.map((tag, i) => (
                 <li
                   key={i}
-                  className="rounded-full border-2 border-white bg-primary-100 px-4 py-1 text-sm font-semibold uppercase tracking-tighter text-primary-900"
+                  className="rounded-full border-8 border-white bg-primary-100 px-4 py-3 text-sm font-black uppercase tracking-tighter text-primary-900"
                 >
                   {tag}
                 </li>
               ))}
           </ul>
-          <Bars3BottomRightIcon className="h-7 w-7 flex-shrink-0 -scale-x-100 transform rounded-3xl border-2 border-white p-1 text-white transition-all duration-200 ease-linear hover:-scale-x-125 hover:scale-y-125" />
+          <Bars3BottomRightIcon className="h-7 w-7 flex-shrink-0 -scale-x-100 transform rounded-3xl border-2 border-primary-900 p-1 transition-all duration-200 ease-linear hover:-scale-x-125 hover:scale-y-125 dark:border-white dark:text-white" />
         </div>
         <h3 className="h3">{title}</h3>
         <Date dateString={date ?? ''} card />

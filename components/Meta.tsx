@@ -26,12 +26,11 @@ export default function Meta() {
 
       {/* Viewport */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="viewport" content="width=1024" />
 
       {/* URL */}
-      <link rel="canonical" href="https://www.seanpatrick.me" />
-      <meta property="og:url" content="https://www.seanpatrick.me" />
-      <meta name="twitter:url" content="https://www.seanpatrick.me" />
+      <link rel="canonical" href="https://www.seanoreilly.me" />
+      <meta property="og:url" content="https://www.seanoreilly.me" />
+      <meta name="twitter:url" content="https://www.seanoreilly.me" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
   )

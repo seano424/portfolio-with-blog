@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="pl-base lg:pl-auto py-base container grid gap-5 text-lg leading-loose dark:text-white">
+    <div className="pl-base lg:pl-auto py-base container grid gap-5 text-lg leading-loose dark:text-white xl:max-w-3xl">
       <h1 className="h1">About</h1>
       <p>
         I'm Sean, a passionate front-end developer specializing in React and
@@ -34,7 +34,7 @@ export default function About() {
           href="https://github.com/seano424"
         >
           GitHub
-        </a>
+        </a>.
       </p>
     </div>
   )

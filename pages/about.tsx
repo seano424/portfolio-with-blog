@@ -23,14 +23,14 @@ export default function About() {
         and keeping up with various publications about the newest technology
         trends and other programming languages. You can find me on{' '}
         <a
-          className="text-primary-blue underline underline-offset-2 hover:text-opacity-75"
+          className="text-primary-blue underline underline-offset-2 hover:text-opacity-75 dark:text-cyan-300"
           href="https://twitter.com/sea_oreilly"
         >
           Twitter
         </a>{' '}
         or{' '}
         <a
-          className="text-primary-blue underline underline-offset-2 hover:text-opacity-75"
+          className="text-primary-blue underline underline-offset-2 hover:text-opacity-75 dark:text-cyan-300"
           href="https://github.com/seano424"
         >
           GitHub

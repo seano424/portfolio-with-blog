@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="pl-base lg:pl-auto container grid gap-5 py-10 text-lg leading-loose dark:text-white">
+    <div className="pl-base lg:pl-auto py-base container grid gap-5 text-lg leading-loose dark:text-white">
       <h2 className="text-4xl font-black tracking-tighter text-dark dark:text-white sm:text-7xl">
         About
       </h2>

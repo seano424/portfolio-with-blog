@@ -1,5 +1,5 @@
 ---
-title: 'How I use Jotai for state management'
+title: 'Using Jotai for state management'
 date: '2023-01-12'
 tags: ['Jotai', 'Tailwind', 'Next.js']
 excerpt: 'Jotai is so simple and I love it! Here is how I used it for managing my state, specifically my theme.'

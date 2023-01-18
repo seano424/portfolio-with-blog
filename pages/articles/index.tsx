@@ -12,7 +12,7 @@ export default function index({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <section className="pl-base lg:pl-auto container grid gap-6">
+    <section className="pl-base lg:pl-auto py-base container grid gap-6">
       <h2 className="flex gap-1 text-4xl font-black tracking-tighter text-dark dark:text-white sm:text-7xl">
         All Articles
         <span className="text-lg lg:text-xl">{posts.length}</span>

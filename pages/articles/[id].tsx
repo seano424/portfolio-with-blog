@@ -22,7 +22,7 @@ const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
         >
           <ArrowLeftIcon className="h-4 w-4 transform text-light transition-all duration-200 ease-linear group-hover:scale-105 dark:text-dark" />
         </button>
-        <h1 className="text-4xl font-black capitalize xl:text-6xl">
+        <h1 className="text-4xl font-black capitalize tracking-tighter transition-all duration-100 ease-linear dark:text-white lg:text-6xl xl:text-6xl">
           {post.title}
         </h1>
         <Date dateString={post.date!} />

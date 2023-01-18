@@ -34,7 +34,8 @@ export default function About() {
           href="https://github.com/seano424"
         >
           GitHub
-        </a>.
+        </a>
+        .
       </p>
     </div>
   )

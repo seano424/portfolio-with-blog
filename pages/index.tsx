@@ -34,12 +34,12 @@ export default function Home() {
       <div className="tranform absolute bottom-72 -left-[123%] right-0 -top-full z-0 -rotate-[20deg] overflow-hidden bg-primary-300/50 transition-all ease-linear lg:bottom-0 xl:bottom-28 2xl:bottom-0">
         <div className="absolute inset-0 z-10 bg-white/30"></div>
         <Image
-          src="/images/water-2.jpg"
+          fill
+          src="/images/water.png"
           className="translate-y-16 -scale-x-100 transform object-cover filter  dark:grayscale"
           alt="background image"
-          priority
           sizes="100vw"
-          fill
+          priority
         />
       </div>
       <div className="pl-base lg:pl-auto container relative z-10 flex flex-col items-center gap-10">

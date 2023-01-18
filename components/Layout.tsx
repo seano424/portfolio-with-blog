@@ -64,11 +64,8 @@ const Layout = ({ children }: PropsWithChildren) => {
           <Header />
           <SidebarMenu />
           <main className="flex-1 py-20">{children}</main>
-          <footer className=" flex flex-wrap justify-center gap-3 bg-white py-5 text-7xl text-black">
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
+          <footer className="flex justify-center gap-3 py-5 text-sm text-black">
+            <p>© 2022 Sean O'Reilly. Front-end Developer. 🐋</p>
           </footer>
         </motion.div>
       )}

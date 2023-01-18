@@ -8,13 +8,7 @@ import Projects from '@/components/Projects'
 export default function Home({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return (
-    <>
-      <Hero />
-      <Projects />
-      <BlogGrid posts={posts} heading="Articles" />
-    </>
-  )
+  return <Hero />
 }
 
 export const getStaticProps: GetStaticProps<{

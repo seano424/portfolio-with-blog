@@ -14,7 +14,7 @@ const ArticleCard = (props: PostType) => {
         )}
       >
         <div className="flex items-start gap-5">
-          <ul className="flex flex-wrap items-center">
+          <ul className="flex flex-wrap items-center gap-1">
             {tags &&
               tags.map((tag, i) => (
                 <li

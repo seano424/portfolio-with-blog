@@ -3,7 +3,7 @@ import { Inter } from '@next/font/google'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 import { getSortedPostsData } from '@/lib/posts'
-import BlogCard from '@/components/BlogCard'
+import ArticleCard from '@/components/ArticleCard'
 import { PostType } from '@/lib/types'
 
 const inter = Inter()
@@ -21,7 +21,7 @@ export default function index({
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {posts.map((post) => (
           <div className="grid h-min gap-6" key={post.id}>
-            <BlogCard {...post} />
+            <ArticleCard {...post} />
             {post.excerpt && (
               <p
                 className={clsx(

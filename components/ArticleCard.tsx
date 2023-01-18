@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Date from './Date'
 import clsx from 'clsx'
 
-const BlogCard = (props: PostType) => {
+const ArticleCard = (props: PostType) => {
   const { tags, title, date, id } = props
   return (
     <Link href={`/articles/${id}`}>
@@ -36,4 +36,4 @@ const BlogCard = (props: PostType) => {
   )
 }
 
-export default BlogCard
+export default ArticleCard

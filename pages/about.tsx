@@ -1,9 +1,7 @@
 export default function About() {
   return (
     <div className="pl-base lg:pl-auto py-base container grid gap-5 text-lg leading-loose dark:text-white">
-      <h2 className="text-4xl font-black tracking-tighter text-dark dark:text-white sm:text-7xl">
-        About
-      </h2>
+      <h1 className="h1">About</h1>
       <p>
         I'm Sean, a passionate front-end developer specializing in React and
         JavaScript. My mission is to translate user-focused designs into smooth

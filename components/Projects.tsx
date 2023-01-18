@@ -1,14 +1,11 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import projects from 'projects'
 import GitHub from '@/icons/GitHub'
 
 export default function Projects() {
   return (
     <section className="pl-base lg:pl-auto container py-10">
-      <h2 className="text-4xl font-black tracking-tighter text-dark dark:text-white sm:text-7xl">
-        Recent Projects
-      </h2>
+      <h1 className="h1">Recent Projects</h1>
 
       <div className="mt-10">
         {projects.map((project, i) => (
@@ -17,16 +14,14 @@ export default function Projects() {
             key={i}
           >
             <div className="grid gap-5">
-              <h4 className="font-mono text-xl font-black tracking-tighter dark:text-primary-100 md:text-3xl">
-                {project.title}
-              </h4>
+              <h3 className="h3 dark:text-white">{project.title}</h3>
               <p className="prose text-lg text-primary-900 transition-all duration-100 ease-linear dark:text-white md:text-xl">
                 {project.excerpt}
               </p>
               <ul className="flex flex-wrap items-center gap-3">
                 {project.tools.map((tool) => (
                   <li
-                    className="list-none rounded-full border-4 border-primary-100 bg-primary-900 px-4 py-1 text-sm font-semibold uppercase tracking-tighter text-light dark:border-white dark:bg-primary-100 dark:text-primary-900"
+                    className="list-none rounded-full border-4 border-primary-100 bg-primary-100 px-4 py-1 text-sm font-black uppercase tracking-widest dark:border-white dark:bg-white dark:text-primary-900"
                     key={tool}
                   >
                     {tool}

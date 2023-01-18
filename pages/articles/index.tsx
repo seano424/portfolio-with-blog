@@ -13,7 +13,7 @@ export default function index({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <section className="pl-base lg:pl-auto py-base container grid gap-6">
-      <h2 className="flex gap-1 text-4xl font-black tracking-tighter text-dark dark:text-white sm:text-7xl">
+      <h2 className="h1 flex gap-1">
         All Articles
         <span className="text-lg lg:text-xl">{posts.length}</span>
       </h2>

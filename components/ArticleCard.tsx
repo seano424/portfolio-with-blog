@@ -27,9 +27,7 @@ const ArticleCard = (props: PostType) => {
           </ul>
           <Bars3BottomRightIcon className="h-7 w-7 flex-shrink-0 -scale-x-100 transform rounded-3xl border-2 border-white p-1 text-white transition-all duration-200 ease-linear hover:-scale-x-125 hover:scale-y-125" />
         </div>
-        <h4 className="text-4xl font-black tracking-tighter md:text-3xl">
-          {title}
-        </h4>
+        <h3 className="h3">{title}</h3>
         <Date dateString={date ?? ''} card />
       </div>
     </Link>

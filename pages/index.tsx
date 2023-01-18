@@ -31,7 +31,7 @@ const socialLinks = [
 export default function Home() {
   return (
     <section className="py-base relative overflow-hidden">
-      <div className="tranform absolute bottom-72 -left-[123%] right-0 -top-full z-0 -rotate-[20deg] bg-primary-100/40 transition-all ease-linear dark:opacity-0  lg:bottom-0"></div>
+      <div className="tranform absolute bottom-72 -left-[123%] right-0 -top-full z-0 -rotate-[20deg] bg-primary-300/50 transition-all ease-linear dark:opacity-0  lg:bottom-0"></div>
       <div className="pl-base lg:pl-auto container relative z-10 flex flex-col items-center gap-10">
         <div className="relative h-64 w-64 rounded-full border-8 border-primary-300 transition-all duration-200 ease-in-out dark:border-white xl:h-80 xl:w-80">
           <Image
@@ -63,10 +63,10 @@ export default function Home() {
                 rel="noreferrer"
               >
                 {link.icon === 'GitHub' && (
-                  <GitHub className="h-8 w-8 text-green-500 transition-all duration-300 ease-linear hover:text-primary-900 dark:text-green-200 dark:hover:text-primary-300" />
+                  <GitHub className="h-8 w-8 text-[#06d6a0] transition-all duration-300 ease-linear hover:text-primary-pink dark:text-emerald-200 dark:hover:text-primary-300" />
                 )}
                 {link.icon === 'Twitter' && (
-                  <Twitter className="h-8 w-8 text-blue-500 transition-all duration-200 ease-linear hover:text-primary-700 dark:text-primary-blue dark:hover:text-white" />
+                  <Twitter className="h-8 w-8 text-blue-500 transition-all duration-200 ease-linear hover:text-primary-blue dark:text-primary-blue dark:hover:text-white" />
                 )}
                 {link.icon === 'LinkedIn' && (
                   <LinkedIn className="h-8 w-8 text-primary-pink transition-all duration-700 ease-linear hover:text-primary-blue dark:text-blue-200 dark:hover:text-white" />
@@ -76,7 +76,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col items-center gap-5">
           <a
             href="mailto:soreilly424@gmail.com"
             className="primary-button"
@@ -85,6 +85,12 @@ export default function Home() {
           >
             Let's get in touch!
           </a>
+          <Link
+            className="primary-button button border-4 border-black bg-white text-black transition-all duration-300 ease-linear"
+            href="/about"
+          >
+            More about me
+          </Link>
         </div>
       </div>
     </section>

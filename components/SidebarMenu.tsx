@@ -30,16 +30,16 @@ const mobileNavLinks = [
     href: '',
   },
   {
-    title: 'Projects',
-    href: 'projects',
+    title: 'About',
+    href: 'about',
   },
   {
     title: 'Articles',
     href: 'articles',
   },
   {
-    title: 'About',
-    href: 'about',
+    title: 'Projects',
+    href: 'projects',
   },
 ]
 
@@ -78,19 +78,19 @@ export default function SidebarMenu() {
                   i === 1 && 'duration-300',
                   i === 2 && 'duration-500',
                   i === 3 && 'duration-700',
-                  'p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all ease-linear hover:text-primary-blue dark:text-white dark:hover:text-cyan-300 md:text-7xl'
+                  'text-4xl font-black tracking-tighter text-fuchsia-400 transition-all ease-linear hover:text-primary-blue dark:text-white dark:hover:text-cyan-300 md:text-7xl'
                 )}
               >
                 {link.title}
               </a>
             ))}
             <Link
-              className="p-1 text-left text-6xl font-black  uppercase tracking-tighter text-fuchsia-400 transition-all duration-1000 ease-linear hover:text-primary-blue dark:text-white dark:hover:text-cyan-300 md:text-7xl"
+              className="text-4xl font-black tracking-tighter text-fuchsia-400 transition-all duration-1000 ease-linear hover:text-primary-blue dark:text-white dark:hover:text-cyan-300 sm:text-7xl md:text-7xl"
               href="mailto:soreilly424@gmail.com"
               target="_blank"
               rel="noreferrer noopener"
             >
-              Contact
+              Email Me
             </Link>
           </div>
         </motion.div>

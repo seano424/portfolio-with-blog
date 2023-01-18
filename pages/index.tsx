@@ -43,7 +43,7 @@ export default function Home() {
           />
         </div>
 
-        <h1 className="text-center text-4xl font-black text-primary-900 transition-all duration-100 ease-linear dark:text-white lg:text-6xl xl:max-w-7xl xl:text-7xl">
+        <h1 className="text-center text-4xl font-black tracking-tighter transition-all duration-100 ease-linear dark:text-white lg:text-6xl xl:max-w-7xl xl:text-7xl">
           Hi! 👋 My name is Sean. I build websites with modern tools &
           technologies!
         </h1>

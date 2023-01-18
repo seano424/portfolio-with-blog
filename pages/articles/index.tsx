@@ -7,7 +7,11 @@ import BlogGrid from '@/components/BlogGrid'
 export default function index({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <BlogGrid posts={posts} heading="All Articles" />
+  return (
+    <section className="py-20">
+      <BlogGrid posts={posts} heading="All Articles" />
+    </section>
+  )
 }
 
 export const getStaticProps: GetStaticProps<{

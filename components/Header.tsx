@@ -9,11 +9,11 @@ const links = [
     title: 'Home',
   },
   {
-    href: '',
+    href: 'projects',
     title: 'Projects',
   },
   {
-    href: '',
+    href: 'about',
     title: 'About',
   },
   {

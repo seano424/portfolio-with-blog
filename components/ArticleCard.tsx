@@ -10,7 +10,7 @@ const ArticleCard = (props: PostType) => {
     <Link href={`/articles/${id}`}>
       <div
         className={clsx(
-          'grid gap-10 rounded-3xl border-4 border-primary-300 bg-primary-100 p-5 leading-loose text-slate-900 shadow transition-all duration-100 ease-linear dark:border-white dark:bg-primary-300'
+          'grid gap-10 rounded-3xl border-8 border-primary-900 p-5 leading-loose text-slate-900 shadow transition-all duration-100 ease-linear dark:border-white dark:bg-primary-300'
         )}
       >
         <div className="flex items-start gap-5">
@@ -27,7 +27,7 @@ const ArticleCard = (props: PostType) => {
           </ul>
           <Bars3BottomRightIcon className="h-7 w-7 flex-shrink-0 -scale-x-100 transform rounded-3xl border-2 border-white p-1 text-white transition-all duration-200 ease-linear hover:-scale-x-125 hover:scale-y-125" />
         </div>
-        <h4 className="font-mono text-xl font-black tracking-tighter md:text-3xl">
+        <h4 className="text-4xl font-black tracking-tighter md:text-3xl">
           {title}
         </h4>
         <Date dateString={date ?? ''} card />

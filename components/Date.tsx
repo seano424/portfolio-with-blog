@@ -15,8 +15,7 @@ const Date = ({ dateString, card = false }: Props) => {
   return (
     <time
       className={clsx(
-        inter.className,
-        'font-light text-dark',
+        'tracking-tighter font-black',
         card ? 'dark:text-dark' : 'dark:text-primary-100'
       )}
       dateTime={dateString}

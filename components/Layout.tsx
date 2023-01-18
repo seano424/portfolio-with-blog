@@ -2,19 +2,23 @@ import clsx from 'clsx'
 import Head from 'next/head'
 import { useAtom } from 'jotai'
 import { Inter } from '@next/font/google'
-import { PropsWithChildren, useEffect, useState } from 'react'
+import { PropsWithChildren, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import SidebarMenu from './SidebarMenu'
+import { useRouter } from 'next/router'
 
 import Cursor from './Cursor'
 import Header from './Header'
 import { themeAtom } from 'store'
 
+const browser = typeof window !== 'undefined'
+
 const inter = Inter({ subsets: ['latin'] })
 
 const Layout = ({ children }: PropsWithChildren) => {
   const [theme] = useAtom(themeAtom)
-  const [mounted, setMounted] = useState(false)
+
+  const router = useRouter()
 
   useEffect(() => {
     console.log(
@@ -29,8 +33,7 @@ const Layout = ({ children }: PropsWithChildren) => {
       '\n',
       '🤗'
     )
-    setMounted(true)
-  }, [])
+  }, [router.asPath])
 
   const spring = {
     type: 'spring',
@@ -60,7 +63,7 @@ const Layout = ({ children }: PropsWithChildren) => {
             />
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          {mounted && <Cursor />}
+          {browser && <Cursor />}
           <Header />
           <SidebarMenu />
           <main className="flex-1 py-20">{children}</main>

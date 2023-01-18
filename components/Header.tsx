@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import ThemeButton from './ThemeButton'
-import MenuIcon from './MenuIcon'
 import Image from 'next/image'
+import MenuIcon from './MenuIcon'
+import ThemeButton from './ThemeButton'
 
 const links = [
   {

@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
 import { useAtom } from 'jotai'
-import { themeAtom } from 'store'
-import { MoonIcon, BoltIcon } from '@heroicons/react/24/solid'
+import { useState, useEffect } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
+import { MoonIcon, BoltIcon } from '@heroicons/react/24/solid'
+
+import { themeAtom } from 'store'
 
 export default function ThemeButton() {
   const [theme, setTheme] = useAtom(themeAtom)

@@ -1,8 +1,8 @@
-import { PostType } from '@/lib/types'
-import { Bars3BottomRightIcon } from '@heroicons/react/24/solid'
-import Link from 'next/link'
-import Date from './Date'
 import clsx from 'clsx'
+import Link from 'next/link'
+import { Bars3BottomRightIcon } from '@heroicons/react/24/solid'
+import { PostType } from '@/lib/types'
+import Date from './Date'
 
 const ArticleCard = (props: PostType) => {
   const { tags, title, date, id } = props

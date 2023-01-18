@@ -3,8 +3,9 @@ import React from 'react'
 import Link from 'next/link'
 import { useAtom } from 'jotai'
 import { useRouter } from 'next/router'
-import { sideBarAtom } from 'store'
 import { AnimatePresence, motion } from 'framer-motion'
+
+import { sideBarAtom } from 'store'
 
 const mobileMenuVariants = {
   hidden: { x: -600 },

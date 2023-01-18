@@ -4,15 +4,14 @@ import { useAtom } from 'jotai'
 import { Inter } from '@next/font/google'
 import { PropsWithChildren, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import SidebarMenu from './SidebarMenu'
-import Footer from './Footer'
 
-import Cursor from './Cursor'
 import Header from './Header'
+import Cursor from './Cursor'
+import Footer from './Footer'
 import { themeAtom } from 'store'
+import SidebarMenu from './SidebarMenu'
 
 const browser = typeof window !== 'undefined'
-
 const inter = Inter({ subsets: ['latin'] })
 
 const Layout = ({ children }: PropsWithChildren) => {

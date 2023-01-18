@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
 import { useAtom } from 'jotai'
-import { themeAtom, sideBarAtom } from 'store'
 import { Squash } from 'hamburger-react'
+import { useState, useEffect } from 'react'
+import { themeAtom, sideBarAtom } from 'store'
 
 export default function MenuIcon() {
   const [theme] = useAtom(themeAtom)

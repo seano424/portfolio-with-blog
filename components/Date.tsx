@@ -1,6 +1,6 @@
-import { parseISO, format } from 'date-fns'
-import { Inter } from '@next/font/google'
 import clsx from 'clsx'
+import { Inter } from '@next/font/google'
+import { parseISO, format } from 'date-fns'
 
 const inter = Inter({})
 

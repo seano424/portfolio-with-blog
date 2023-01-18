@@ -1,6 +1,6 @@
+import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useRouter } from 'next/router'
 
 export default function Cursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 })

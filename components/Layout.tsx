@@ -1,10 +1,10 @@
 import clsx from 'clsx'
-import Head from 'next/head'
 import { useAtom } from 'jotai'
 import { Inter } from '@next/font/google'
 import { PropsWithChildren, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
+import Meta from './Meta'
 import Header from './Header'
 import Cursor from './Cursor'
 import Footer from './Footer'
@@ -51,28 +51,7 @@ const Layout = ({ children }: PropsWithChildren) => {
             inter.className
           )}
         >
-          <Head>
-            <title>Sean O'Reilly | Front-end Developer</title>
-            <meta
-              name="description"
-              content="Sean O'Reilly's Web Development Portfolio"
-              key="desc"
-            />
-            <meta
-              property="og:title"
-              content="Sean O'Reilly's Web Development Portfolio"
-            />
-            <meta
-              property="og:description"
-              content="Sean O'Reilly's Web Development Portfolio"
-            />
-            <meta property="og:image" content="/images/portfolio.png" />
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1"
-            />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
+          <Meta />
           {browser && <Cursor />}
           <Header />
           <SidebarMenu />

@@ -5,7 +5,6 @@ import { Inter } from '@next/font/google'
 import { PropsWithChildren, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import SidebarMenu from './SidebarMenu'
-import { useRouter } from 'next/router'
 
 import Cursor from './Cursor'
 import Header from './Header'
@@ -17,8 +16,6 @@ const inter = Inter({ subsets: ['latin'] })
 
 const Layout = ({ children }: PropsWithChildren) => {
   const [theme] = useAtom(themeAtom)
-
-  const router = useRouter()
 
   useEffect(() => {
     console.log(
@@ -33,7 +30,7 @@ const Layout = ({ children }: PropsWithChildren) => {
       '\n',
       '🤗'
     )
-  }, [router.asPath])
+  }, [])
 
   const spring = {
     type: 'spring',

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 export default function Cursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -7,6 +8,7 @@ export default function Cursor() {
   const [clicked, setClicked] = useState(false)
   const [linkHovered, setLinkHovered] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const router = useRouter()
 
   const isMobile = () => {
     const ua = navigator.userAgent
@@ -64,7 +66,7 @@ export default function Cursor() {
     addEventListeners()
     handleLinkHoverEvents()
     return () => removeEventListeners()
-  }, [])
+  }, [router.asPath])
 
   if (typeof navigator !== 'undefined' && isMobile()) return null
   return (

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.13",
@@ -36,6 +37,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "autoprefixer": "^10.4.13",
+    "cypress": "^12.3.0",
     "eslint-config-prettier": "^8.6.0",
     "postcss": "^8.4.20",
     "postcss-import": "^15.1.0",

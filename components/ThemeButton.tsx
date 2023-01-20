@@ -53,6 +53,7 @@ export default function ThemeButton() {
           initial="hidden"
           animate="show"
           exit="exit"
+          aria-label="change color theme button"
         >
           {icon}
         </m.button>

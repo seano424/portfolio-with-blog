@@ -44,12 +44,29 @@ export default function Header() {
     }
   }, [scrollYProgress])
 
+  let status = scrollYProgress.get() > 0.5 ? 'complete' : 'active'
+
   return (
-    <motion.nav className="fixed z-40 flex h-20 w-full bg-light bg-transparent bg-opacity-90 py-4 filter backdrop-blur-sm transition-all duration-200 ease-linear dark:bg-transparent">
+    <motion.nav
+      animate={status}
+      className="fixed z-40 flex h-20 w-full bg-light bg-transparent bg-opacity-90 py-4 filter backdrop-blur-sm transition-all duration-200 ease-linear dark:bg-transparent"
+    >
       {router.pathname === '/articles' && (
         <motion.div
-          style={{ scaleX: scrollYProgress }}
-          className="absolute left-0 right-0 top-0 h-4 origin-left transform rounded-br-3xl bg-primary-100 lg:hidden"
+          initial={false}
+          variants={{
+            active: {
+              backgroundColor: 'var(--primary-100)',
+            },
+            complete: {
+              backgroundColor: 'var(--primary-300)',
+            },
+          }}
+          transition={{ duration: 0.5 }}
+          style={{
+            scaleX: scrollYProgress,
+          }}
+          className="absolute left-0 right-0 top-0 h-1 origin-left transform  lg:hidden"
         ></motion.div>
       )}
       <div className="container flex items-center justify-between">

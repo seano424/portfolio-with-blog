@@ -12,7 +12,7 @@ const Date = ({ dateString, card = false }: Props) => {
   return (
     <time
       className={clsx(
-        'tracking-tighter font-black',
+        'font-black tracking-tighter',
         card ? 'dark:text-dark' : 'dark:text-primary-100'
       )}
       dateTime={dateString}

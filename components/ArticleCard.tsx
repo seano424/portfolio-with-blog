@@ -6,6 +6,7 @@ import Date from './Date'
 
 const ArticleCard = (props: PostType) => {
   const { tags, title, date, id } = props
+
   return (
     <Link href={`/articles/${id}`}>
       <div
@@ -28,7 +29,7 @@ const ArticleCard = (props: PostType) => {
           <Bars3BottomRightIcon className="h-7 w-7 flex-shrink-0 -scale-x-100 transform rounded-3xl border-2 border-primary-900 p-1 transition-all duration-200 ease-linear hover:-scale-x-125 hover:scale-y-125 dark:border-white dark:text-white" />
         </div>
         <h3 className="h3">{title}</h3>
-        <Date dateString={date ?? ''} card />
+        <Date dateString={date!} card />
       </div>
     </Link>
   )

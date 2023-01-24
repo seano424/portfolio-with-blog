@@ -2,10 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import MenuIcon from './MenuIcon'
 import ThemeButton from './ThemeButton'
-import { useScroll, motion } from 'framer-motion'
-import { useRouter } from 'next/router'
-import clsx from 'clsx'
-import { useEffect, useState } from 'react'
 
 const links = [
   {
@@ -27,48 +23,8 @@ const links = [
 ]
 
 export default function Header() {
-  const { scrollYProgress } = useScroll()
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const router = useRouter()
-
-  const handleScroll = () => {
-    const position = window.pageYOffset
-    setScrollPosition(position)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true })
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [scrollYProgress])
-
-  let status = scrollYProgress.get() > 0.5 ? 'complete' : 'active'
-
   return (
-    <motion.nav
-      animate={status}
-      className="fixed z-40 flex h-20 w-full bg-light bg-transparent bg-opacity-90 py-4 filter backdrop-blur-sm transition-all duration-200 ease-linear dark:bg-transparent"
-    >
-      {router.pathname === '/articles' && (
-        <motion.div
-          initial={false}
-          variants={{
-            active: {
-              backgroundColor: 'var(--primary-100)',
-            },
-            complete: {
-              backgroundColor: 'var(--primary-300)',
-            },
-          }}
-          transition={{ duration: 0.5 }}
-          style={{
-            scaleX: scrollYProgress,
-          }}
-          className="absolute left-0 right-0 top-0 h-1 origin-left transform  lg:hidden"
-        ></motion.div>
-      )}
+    <nav className="fixed z-40 flex h-20 w-full bg-light bg-transparent bg-opacity-90 py-4 filter backdrop-blur-sm transition-all duration-75 ease-linear dark:bg-transparent dark:bg-dark xl:bg-inherit">
       <div className="container flex items-center justify-between">
         <Link
           href="/"
@@ -88,24 +44,18 @@ export default function Header() {
         </Link>
         <ul className="hidden items-center justify-center gap-12 lg:flex">
           {links.map((link) => (
-            <li key={link.title}>
-              <Link
-                href={`/${link.href}`}
-                className={clsx(
-                  'button transform rounded-full px-5 py-4 text-3xl font-black tracking-tighter transition-all  duration-500 ease-linear hover:bg-gray-200/60 dark:text-light dark:hover:scale-110 dark:hover:text-gray-100',
-                  scrollPosition > 140
-                    ? 'dark:hover:bg-neutral-900/50'
-                    : 'dark:hover:bg-light/30'
-                )}
-              >
-                {link.title}
-              </Link>
-            </li>
+            <Link
+              key={link.title}
+              href={`/${link.href}`}
+              className="button transform rounded-full px-5 py-4 text-3xl font-black tracking-tighter transition-all  duration-700 ease-linear hover:bg-gray-200/60 dark:text-light dark:hover:scale-110 dark:hover:bg-neutral-900/50 dark:hover:text-gray-100"
+            >
+              {link.title}
+            </Link>
           ))}
         </ul>
         <MenuIcon />
         <ThemeButton />
       </div>
-    </motion.nav>
+    </nav>
   )
 }

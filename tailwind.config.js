@@ -51,6 +51,22 @@ module.exports = {
           900: '#164e63',
         },
       },
+      keyframes: {
+        comeInOut: {
+          '0%': { transform: 'scale(0)' },
+          '50%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(0)' },
+        },
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(180deg)' },
+        },
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        comeInOut: 'comeInOut 1.1s ease-in-out infinite',
+        spin: 'spin 700ms linear infinite',
+      },
     },
   },
   plugins: [

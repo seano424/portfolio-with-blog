@@ -6,7 +6,7 @@ import { getSortedPostsData } from '@/lib/posts'
 import ArticleCard from '@/components/ArticleCard'
 import { PostType } from '@/lib/types'
 
-const inter = Inter()
+const inter = Inter({ subsets: ['latin'] })
 
 export default function index({
   posts,

@@ -57,9 +57,9 @@ export default function Home() {
           />
         </div>
 
-        <h2 className="h2 xl:max-w-8xl text-center drop-shadow-2xl">
-          Hi! 👋 My name is Sean. I build websites with modern tools &{' '}
-          <Sparkles>technologies!</Sparkles>
+        <h2 className="h2 xl:max-w-6xl text-center drop-shadow-2xl">
+          Hi! 👋 My name is Sean. I build <Sparkles>websites</Sparkles> with
+          modern tools & technologies!
         </h2>
 
         <div>

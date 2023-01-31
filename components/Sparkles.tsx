@@ -6,7 +6,7 @@ import React from 'react'
 import { useAtom } from 'jotai'
 import { themeAtom } from 'store'
 
-const DEFAULT_COLOR = 'var(--fuchsia-500)'
+const DEFAULT_COLOR = 'var(--fuchsia-400)'
 const generateSparkle = (color: string) => {
   const sparkle = {
     id: String(random(10000, 99999)),

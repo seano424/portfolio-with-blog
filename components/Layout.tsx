@@ -55,7 +55,7 @@ const Layout = ({ children }: PropsWithChildren) => {
           {browser && <Cursor />}
           <Header />
           <SidebarMenu />
-          <main className="flex-1 py-20">{children}</main>
+          <main className="flex-1 py-28">{children}</main>
           <Footer />
         </motion.div>
       )}

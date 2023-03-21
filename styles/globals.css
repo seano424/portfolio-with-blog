@@ -10,3 +10,12 @@
   --primary-color: #3b82f6;
   --secondary-color: #000;
 }
+
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection {
+  background-color: var(--primary-pink);
+  color: #fff;
+}

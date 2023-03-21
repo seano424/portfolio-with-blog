@@ -3,7 +3,6 @@ import GitHub from '@/icons/GitHub'
 import Twitter from '@/icons/Twitter'
 import LinkedIn from '@/icons/LinkedIn'
 import Image from 'next/image'
-import Sparkles from '@/components/Sparkles'
 
 const socialLinks = [
   {
@@ -58,7 +57,7 @@ export default function Home() {
         </div>
 
         <h2 className="h2 xl:max-w-6xl text-center drop-shadow-2xl">
-          Hi! 👋 My name is Sean. I build <Sparkles>websites</Sparkles> with
+          Hi! 👋 My name is Sean. I build websites with
           modern tools & technologies!
         </h2>
 

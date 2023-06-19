@@ -7,13 +7,13 @@ export default function Projects() {
     <section className="pl-base lg:pl-auto container py-10">
       <h1 className="h1">Recent Projects</h1>
 
-      <div className="mt-10">
+      <div className="mt-10 flex flex-col gap-20">
         {projects.map((project, i) => (
           <div
-            className="flex flex-col-reverse items-center gap-10 lg:flex-row"
+            className="flex flex-col-reverse items-center gap-10 rounded-3xl p-5 shadow-2xl lg:grid lg:grid-cols-3"
             key={i}
           >
-            <div className="grid gap-5">
+            <div className="grid gap-5 lg:col-span-1">
               <h3 className="h3 dark:text-white">{project.title}</h3>
               <p className="prose text-lg text-primary-900 transition-all duration-100 ease-linear dark:text-white md:text-xl">
                 {project.excerpt}
@@ -41,9 +41,9 @@ export default function Projects() {
                 </a>
               </div>
             </div>
-            <div className="relative aspect-[1.77/1] w-full rounded-xl border-8 border-white lg:h-[420px]">
+            <div className="relative aspect-[1.77/1] w-full rounded-xl border-8 border-white lg:col-span-2 lg:h-[600px]">
               <Image
-                className="rounded object-cover object-top"
+                className="rounded object-cover object-left-top"
                 src={project.image}
                 alt="project image"
                 fill

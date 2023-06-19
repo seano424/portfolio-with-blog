@@ -10,7 +10,7 @@ export default function About() {
           content="I have been developing applications since 2020. Here is a little bit more about me."
         ></meta>
       </Head>
-      <div className="pl-base lg:pl-auto py-base container grid gap-5 text-lg leading-loose dark:text-white xl:max-w-3xl">
+      <div className="pl-base lg:pl-auto py-base container grid gap-5 text-2xl leading-loose tracking-tight dark:text-slate-200 xl:max-w-3xl">
         <h1 className="h1">About</h1>
         <p>
           I'm Sean, a passionate front-end developer specializing in React and
